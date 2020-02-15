@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Classic YouTube Design",
+	"version": "0.1",
+	"description": "Recreates the classic YouTube experience within the new polymer layout.",
+	"homepage_url": "https://github.com/Cicero-Interactive/Classic-YouTube-Design",
+
+	"icons": {
+		"48": "assets/icon48x48.png"
+	},
+
+	"content_scripts": [
+		{
+			"matches": ["*://*.youtube.com/*"],
+			"css": ["classicYouTubeDesign.css"],
+			"js": ["classicYouTubeDesign.js"]
+		}
+	]
+}

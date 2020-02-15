@@ -1,0 +1,1012 @@
+/* 
+===================
+    General
+===================
+*/
+
+ytd-app {
+    --app-drawer-width: 230px;
+    --app-drawer-content-container_-_background-color: $yt-main-app-background;
+    --yt-spec-general-background-a: #f1f1f1;
+    background: var(--yt-spec-general-background-a);
+}
+ytd-button-renderer.style-scope.style-suggestive,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer {
+    margin: auto;
+}
+ytd-button-renderer.style-scope.style-suggestive > a,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer > a {
+    outline: 0;
+    font-weight: 500;
+    border-color: #167ac6;
+    background: #167ac6;
+    color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+    border: solid 1px transparent;
+    box-sizing: border-box;
+}
+/*
+Messes up other buttons; needs to be applied to each button seperately:
+*/
+ytd-button-renderer.style-scope.size-small.style-suggestive > a {
+    padding: 0px 10px;
+    height: 28px;
+    font-size: 11px;
+}
+ytd-button-renderer.style-scope.size-default.style-suggestive > a,
+html body ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container div.buttons.style-scope.ytd-modal-with-title-and-button-renderer ytd-button-renderer#button.style-scope.ytd-modal-with-title-and-button-renderer.style-blue-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer {
+    padding: 0px 40px;
+    height: 35px;
+    font-size: 15px;
+}
+/* --- */
+ytd-button-renderer.style-scope.style-suggestive > a:hover,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer > a:hover {
+    background: #126db3;
+}
+ytd-button-renderer.style-scope.style-suggestive > a > paper-button,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer > a > paper-button {
+    min-width: 0px;
+}
+ytd-button-renderer.style-scope.style-suggestive yt-icon,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer yt-icon {
+    display: none;
+}
+ytd-button-renderer.style-scope.style-suggestive yt-formatted-string,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer yt-formatted-string {
+    margin: 0px !important;
+    color: white;
+    text-transform: capitalize;
+}
+ytd-button-renderer.style-scope.style-suggestive #button,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer #button {
+    border: none;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.circle {
+    display: none;
+}
+
+
+
+
+/* 
+===================
+    Navbar 
+===================
+*/
+
+#container.ytd-masthead {
+    height: 50px;
+    box-sizing: border-box;
+    background: var(--yt-spec-brand-background-solid);
+    border-bottom: 1px solid #e8e8e8;
+    min-width: 0;
+    padding-bottom: 8px;
+    padding-top: 7px;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+}
+#guide-button {
+    margin: 0px 0px 0px -7px !important;
+    padding: 0px 10px;
+}
+#guide-button #guide-icon {
+    width: 18px;
+    color: rgb(150, 150, 150);
+}
+#guide-button #guide-icon:hover {
+    color: rgb(50, 50, 50);
+}
+ytd-searchbox#search {
+    margin-left: 38px;
+}
+ytd-searchbox#search > #search-form {
+    max-width: 650px;
+    height: 29px;
+    padding: 0px;
+}
+ytd-searchbox#search > #search-form > div#container {
+    padding: 0px;
+    border-radius: 0px;
+}
+ytd-searchbox#search > #search-form input {
+    line-height: 23px;
+    margin: 0px;
+    padding: 2px 6px;
+}
+ytd-searchbox#search > #search-form input::placeholder {
+    color: #767676;
+}
+ytd-searchbox#search > #search-form > button#search-icon-legacy {
+    width: 66px;
+}
+#logo-icon-container.ytd-topbar-logo-renderer {
+    width: 100px;
+    height: 30px;
+}
+#search-form.ytd-searchbox {
+    margin: 0px;
+}
+
+
+
+
+/* 
+===================
+    Left navbar 
+===================
+*/
+#guide-spacer.ytd-app {
+    margin-top: 50px;
+}
+ytd-guide-renderer.ytd-app {
+    width: 230px;
+    border-right: 1px solid #e8e8e8;
+}
+#sections.ytd-guide-renderer {
+    width: 230px;
+    padding: 13px 22px;
+    box-sizing: border-box;
+}
+paper-item.ytd-guide-entry-renderer {
+    padding: 0px 8.5px;
+}
+ytd-guide-renderer {
+    box-sizing: border-box;
+}
+ytd-guide-section-renderer {
+    --paper-item-min-height: 28px;
+}
+.title.ytd-guide-entry-renderer {
+    font-size: 13px;
+    line-height: 20px;
+}
+ytd-guide-entry-renderer:hover {
+    background: #444;
+}
+ytd-guide-entry-renderer[active] {
+    background: #cc181e; 
+}
+.guide-icon.ytd-guide-entry-renderer {
+    --iron-icon-height: 20px;
+    --iron-icon-width: 20px;
+    margin-right: 10px;
+}
+ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer,
+ytd-guide-entry-renderer:hover .guide-icon.ytd-guide-entry-renderer {
+    color: white !important;   
+}
+.title.ytd-guide-entry-renderer {
+    color: rgb(34, 34, 34);
+}
+ytd-guide-entry-renderer[active] .title.ytd-guide-entry-renderer,
+ytd-guide-entry-renderer:hover .title.ytd-guide-entry-renderer{
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 20px;
+    text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
+    color: #fff;
+}
+ytd-guide-signin-promo-renderer {
+    /* display: none; */
+}
+#sections.ytd-guide-renderer > .ytd-guide-renderer {
+    padding: 8px 0px !important;
+}
+#sections.ytd-guide-renderer > .ytd-guide-renderer:first-child {
+    padding-top: 0px !important;
+}
+ytd-guide-renderer > .ytd-guide-renderer > ytd-guide-signin-promo-renderer > * {
+    padding: 0px 5px;
+    font-size: 13px;
+    line-height: 16.9px;
+}
+ytd-guide-renderer > .ytd-guide-renderer > ytd-guide-signin-promo-renderer > ytd-button-renderer {
+    margin-top: 10px !important;
+}
+#guide-section-title.ytd-guide-section-renderer {
+    margin: 0 5px;
+    padding: 1px 0 8px;
+    color: #f00;
+    line-height: 13px;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+ytd-guide-entry-renderer yt-img-shadow.ytd-guide-entry-renderer {
+    width: 20px;
+    height: 20px;
+    border-radius: 0%;
+}
+ytd-guide-entry-renderer yt-img-shadow.ytd-guide-entry-renderer img.yt-img-shadow {
+    width: 20px;
+    height: 20px;
+}
+ytd-guide-entry-renderer yt-img-shadow {
+    margin-right: 12px !important;
+}
+#footer {
+    color: rgb(51, 51, 51);
+}
+#footer #guide-links-secondary a {
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+}
+#footer a:hover {
+    color: #167ac6 !important;
+    text-decoration: underline;
+}
+#footer #vat-notice > div,
+#footer #copyright > div {
+    font-weight: 400;
+    font-size: 11px;
+    color: rgb(102, 102, 102);
+}
+
+/* Left bar mini */
+ytd-mini-guide-renderer.ytd-app {
+    top: 50px;
+    border-right: 1px solid #e8e8e8;
+}
+
+
+/* 
+===================
+    Main page 
+===================
+*/
+
+/* Margin from top navbar */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
+    margin-top: var(--ytd-masthead-height, 50px)
+}
+ytd-rich-grid-renderer {
+    background-color: var(--yt-spec-brand-background-primary);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    margin: 2% auto;
+    padding: 0px 8px 15px 18px;
+    width: 226px;
+    box-sizing: border-box;
+}
+@media only screen and (min-width: 550px) {
+    ytd-rich-grid-renderer {
+        width: 438px;
+    }
+}
+@media only screen and (min-width: 700px) {
+    ytd-rich-grid-renderer {
+        width: 644px;
+    }
+}
+@media only screen and (min-width: 1175px) {
+    ytd-rich-grid-renderer {
+        width: 1056px;
+    }
+}
+@media only screen and (min-width: 1575px) {
+    ytd-rich-grid-renderer {
+        width: 1262px;
+    }
+}
+#grid-header.ytd-rich-grid-renderer,
+#rich-shelf-header.ytd-rich-shelf-renderer {
+    margin: 15px 0px 10px 0px;
+}
+#title.ytd-rich-grid-renderer,
+#title.ytd-rich-shelf-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-6-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-section-renderer ytd-rich-shelf-renderer.style-scope.ytd-rich-section-renderer div#dismissable.style-scope.ytd-rich-shelf-renderer div#rich-shelf-header.style-scope.ytd-rich-shelf-renderer {
+    margin: 0px;
+    padding: 0px;
+    color: var(--yt-spec-text-primary);
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-6-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-section-renderer ytd-rich-shelf-renderer.style-scope.ytd-rich-section-renderer div#dismissable.style-scope.ytd-rich-shelf-renderer div#rich-shelf-header.style-scope.ytd-rich-shelf-renderer h2.style-scope.ytd-rich-shelf-renderer {
+    padding-bottom: 10px;
+}
+/* X button for category */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-6-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-section-renderer ytd-rich-shelf-renderer.style-scope.ytd-rich-section-renderer div#dismissable.style-scope.ytd-rich-shelf-renderer div#rich-shelf-header.style-scope.ytd-rich-shelf-renderer div#menu.style-scope.ytd-rich-shelf-renderer {
+    margin-top: 0px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-6-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-section-renderer ytd-rich-shelf-renderer.style-scope.ytd-rich-section-renderer div#dismissable.style-scope.ytd-rich-shelf-renderer div#rich-shelf-header.style-scope.ytd-rich-shelf-renderer div#menu.style-scope.ytd-rich-shelf-renderer ytd-menu-renderer.style-scope.ytd-rich-shelf-renderer div#top-level-buttons.style-scope.ytd-menu-renderer ytd-button-renderer.style-scope.ytd-menu-renderer.style-opacity.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer yt-icon-button#button.style-scope.ytd-button-renderer.style-opacity.size-default {
+    padding: 0px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-6-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-section-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-section-renderer ytd-rich-shelf-renderer.style-scope.ytd-rich-section-renderer div#dismissable.style-scope.ytd-rich-shelf-renderer div#rich-shelf-header.style-scope.ytd-rich-shelf-renderer {
+    --yt-button-icon-size: 20px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-6-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer {
+    margin-top: 0px;
+}
+#contents.ytd-rich-grid-renderer, #grid-header.ytd-rich-grid-renderer {
+    width: 100%;
+}
+ytd-rich-shelf-renderer {
+    border-top: 1px solid #e2e2e2;
+}
+#show-more-button.ytd-rich-shelf-renderer,
+ytd-rich-shelf-renderer[is-show-more-hidden] #dismissable.ytd-rich-shelf-renderer {
+    border-bottom: 1px solid #e2e2e2;
+}
+ytd-rich-section-renderer,
+#contents.ytd-rich-shelf-renderer {
+    margin: 0px;
+}
+#content.ytd-rich-section-renderer > .ytd-rich-section-renderer {
+    margin-bottom: 15px;
+}
+
+
+/* 
+===================
+    Video cards
+===================
+*/
+
+ytd-rich-item-renderer {
+    width: 196px;
+    margin: 0px 10px 12px 0px;
+    margin-bottom: 12px;
+}
+ytd-rich-item-renderer:hover yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string {
+    color: rgb(22, 122, 198);
+}
+ytd-rich-grid-video-renderer[mini-mode] #video-title.ytd-rich-grid-video-renderer {
+    font-size: 13px;
+    line-height: 16.9px;
+    
+}
+/* Thumbnail container */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-3-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-item-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-item-renderer ytd-rich-grid-video-renderer.style-scope.ytd-rich-item-renderer div#dismissable.style-scope.ytd-rich-grid-video-renderer ytd-thumbnail.style-scope.ytd-rich-grid-video-renderer {
+    margin-bottom: 4px;
+    display: block;
+}
+/* Channel picture */
+#avatar-link.ytd-rich-grid-video-renderer {
+    display: none;
+}
+/* Video info */
+#video-title.ytd-rich-grid-video-renderer {
+    font-size: 13px;
+    line-height: 16.9px;
+    color: rgb(22, 122, 198);
+}
+#video-title.ytd-rich-grid-video-renderer:hover {
+    text-decoration: underline;
+}
+h3.ytd-rich-grid-video-renderer,
+ytd-rich-grid-video-renderer[mini-mode] h3.ytd-rich-grid-video-renderer {
+    margin: 0px;
+}
+#meta.ytd-rich-grid-video-renderer {
+    padding-right: 20px;
+}
+yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string:hover {
+    color: #167ac6;
+    text-decoration: underline;
+}
+ytd-video-meta-block[rich-meta] #channel-name.ytd-video-meta-block, ytd-video-meta-block[rich-meta] #metadata-line.ytd-video-meta-block {
+    color: rgb(118, 118, 118);
+    font-size: 11px;
+    line-height: 14.3px;
+    font-weight: 400;
+
+}
+
+
+/* 
+===================
+    Watch page 
+===================
+*/
+ytd-app[is-watch-page] {
+    --yt-spec-general-background-a: #f1f1f1;
+}
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
+    --ytd-toolbar-offset: var(--ytd-masthead-height, 50px);
+}
+#content.style-scope.ytd-page-manager.hide-skeleton .metadata.ytd-compact-video-renderer {
+    padding-right: 15px;
+}
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy {
+    max-width: 1755px;
+    margin-top: 10px;
+    box-sizing: border-box;
+}
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy {
+    padding: 0px;
+    margin: 0px;
+}
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy {
+    margin-left: 24px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
+    margin-left: 12px;
+    padding-right: 12px;
+}
+@media only screen and (max-width: 1016px) {
+    #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy {
+    margin-left: 24px;
+    margin-right: 24px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
+    margin-left: 0px;
+    padding-right: 0px;
+}
+}
+/* Video player */
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
+    margin-bottom: 10px;
+}
+
+/* Channel clarification */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#clarify-box.style-scope.ytd-watch-flexy ytd-clarification-renderer.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 10px 0px;
+    padding: 15px;
+    background: var(--yt-spec-brand-background-solid);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+
+/* Watch-header */
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 0px 0px;
+    padding: 15px 15px 1px 15px;
+    background: var(--yt-spec-brand-background-solid);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    border-bottom: 1px solid #e2e2e2;
+}
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy {
+    padding: 0px;
+    border-bottom: 0px;
+}
+/* Watch-header title */
+#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-primary-info-renderer h1.title.style-scope.ytd-video-primary-info-renderer yt-formatted-string.style-scope.ytd-video-primary-info-renderer {
+    font-size: 20px;
+}
+/* Font for like and dislike counter */ /*
+ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-primary-info-renderer div#info.style-scope.ytd-video-primary-info-renderer div#menu-container.style-scope.ytd-video-primary-info-renderer div#menu.style-scope.ytd-video-primary-info-renderer ytd-menu-renderer.style-scope.ytd-video-primary-info-renderer div#top-level-buttons.style-scope.ytd-menu-renderer ytd-toggle-button-renderer.style-scope.ytd-menu-renderer.force-icon-button.style-text a.yt-simple-endpoint.style-scope.ytd-toggle-button-renderer yt-formatted-string#text.style-scope.ytd-toggle-button-renderer.style-text,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-primary-info-renderer div#info.style-scope.ytd-video-primary-info-renderer div#menu-container.style-scope.ytd-video-primary-info-renderer div#menu.style-scope.ytd-video-primary-info-renderer ytd-menu-renderer.style-scope.ytd-video-primary-info-renderer div#top-level-buttons.style-scope.ytd-menu-renderer ytd-toggle-button-renderer.style-scope.ytd-menu-renderer.force-icon-button.style-text a.yt-simple-endpoint.style-scope.ytd-toggle-button-renderer yt-formatted-string#text.style-scope.ytd-toggle-button-renderer.style-text {
+    font-family: "YouTube Noto",Roboto,arial,sans-serif;
+    font-size: 11px;
+    line-height: 13px;
+    font-weight: 400;
+}*/
+/* Like/dislike bar */
+ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-primary-info-renderer div#info.style-scope.ytd-video-primary-info-renderer div#menu-container.style-scope.ytd-video-primary-info-renderer ytd-sentiment-bar-renderer#sentiment.style-scope.ytd-video-primary-info-renderer {
+    padding: 0px;
+}
+/* Like/dislike grey bar, parent of blue bar */
+ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-primary-info-renderer div#info.style-scope.ytd-video-primary-info-renderer div#menu-container.style-scope.ytd-video-primary-info-renderer ytd-sentiment-bar-renderer#sentiment.style-scope.ytd-video-primary-info-renderer div#container.style-scope.ytd-sentiment-bar-renderer {
+    background: #ccc;
+    
+}
+/* Like/dislike blue bar */
+ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#info.style-scope.ytd-watch-flexy div#info-contents.style-scope.ytd-watch-flexy ytd-video-primary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-primary-info-renderer div#info.style-scope.ytd-video-primary-info-renderer div#menu-container.style-scope.ytd-video-primary-info-renderer ytd-sentiment-bar-renderer#sentiment.style-scope.ytd-video-primary-info-renderer div#container.style-scope.ytd-sentiment-bar-renderer div#like-bar.style-scope.ytd-sentiment-bar-renderer {
+    background: #167ac6;
+}
+
+/* Sign-in suggestion box */
+ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container {
+    padding: 20px;
+    min-width: unset;
+    background: var(--yt-spec-brand-background-solid);
+    border: 1px solid #c5c5c5;
+    box-shadow: 0 0 15px rgba(0,0,0,.18);
+}
+/* Sign-in suggestion box header */
+ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container yt-formatted-string#title.style-scope.ytd-modal-with-title-and-button-renderer {
+    margin: 0px 0px 15px 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 16.9px;
+    color: rgb(85, 85, 85)
+}
+/* Sign-in suggestion box text */
+ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container yt-formatted-string#content.style-scope.ytd-modal-with-title-and-button-renderer {
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-size: 13px;
+    line-height: 1.3em;
+}
+/* Sign-in suggestion box button */
+ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container div.buttons.style-scope.ytd-modal-with-title-and-button-renderer {
+    margin: 0px;
+    padding: 0px;
+    height: unset;
+    border: none;
+}
+/* Sign-in suggestion box button inner */
+html body ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container div.buttons.style-scope.ytd-modal-with-title-and-button-renderer ytd-button-renderer#button.style-scope.ytd-modal-with-title-and-button-renderer.style-blue-text.size-default {
+    margin: 0px;
+    padding: 0px;
+}
+/* Sign-in suggestion box button text */
+ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container div.buttons.style-scope.ytd-modal-with-title-and-button-renderer ytd-button-renderer#button.style-scope.ytd-modal-with-title-and-button-renderer.style-blue-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-blue-text.size-default yt-formatted-string#text.style-scope.ytd-button-renderer.style-blue-text.size-default {
+    text-transform: capitalize;
+}
+
+
+/* Video description */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 10px 0px;
+    padding: 8px 15px 0px 15px;
+    background: var(--yt-spec-brand-background-solid);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+/* Video description channel */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer {
+    margin-bottom: 10px;
+    padding: 0px 0px 8px 0px;
+    border-bottom: 1px solid #e2e2e2;
+}
+/* Video description channel name hover */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer div#upload-info.style-scope.ytd-video-owner-renderer ytd-channel-name#channel-name.style-scope.ytd-video-owner-renderer div#container.style-scope.ytd-channel-name div#text-container.style-scope.ytd-channel-name yt-formatted-string#text.style-scope.ytd-channel-name a.yt-simple-endpoint.style-scope.yt-formatted-string:hover {
+    color: unset;
+}
+/* Video description channel sponsor button */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer div#sponsor-button.style-scope.ytd-video-owner-renderer ytd-button-renderer.style-scope.ytd-video-owner-renderer.style-suggestive.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer {
+    padding: 0px;
+    background-color: transparent;
+    border: 1px solid #167ac6;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer div#sponsor-button.style-scope.ytd-video-owner-renderer ytd-button-renderer.style-scope.ytd-video-owner-renderer.style-suggestive.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-suggestive.size-default {
+    padding: var(--yt-button-padding-minus-border) !important;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer div#sponsor-button.style-scope.ytd-video-owner-renderer ytd-button-renderer.style-scope.ytd-video-owner-renderer.style-suggestive.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-suggestive.size-default yt-formatted-string#text.style-scope.ytd-button-renderer.style-suggestive.size-default {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 17px;
+    color: #167ac6;
+}
+/* Video description text box */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer {
+    margin-left: 0px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer div#content.style-scope.ytd-expander div#description.style-scope.ytd-video-secondary-info-renderer {
+    max-width: unset;
+}
+/* Video description text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer div#content.style-scope.ytd-expander div#description.style-scope.ytd-video-secondary-info-renderer yt-formatted-string.content.style-scope.ytd-video-secondary-info-renderer {
+    font-size: 13px;
+    line-height: 14px;
+    /* color: rgb(51, 51, 51); */
+}
+/* Video descroption links */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer div#content.style-scope.ytd-expander div#description.style-scope.ytd-video-secondary-info-renderer yt-formatted-string.content.style-scope.ytd-video-secondary-info-renderer a {
+    /* color: rgb(22, 122, 198) */
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer div#content.style-scope.ytd-expander div#description.style-scope.ytd-video-secondary-info-renderer yt-formatted-string.content.style-scope.ytd-video-secondary-info-renderer a:hover {
+    text-decoration: underline;
+}
+/* Video descroption metadata */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer ytd-metadata-row-container-renderer.sticky.style-scope.ytd-video-secondary-info-renderer div#collapsible.style-scope.ytd-metadata-row-container-renderer ytd-metadata-row-renderer.style-scope.ytd-metadata-row-container-renderer h4#title.style-scope.ytd-metadata-row-renderer yt-formatted-string.style-scope.ytd-metadata-row-renderer {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 11px;
+    color: rgb(51, 51, 51)
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer ytd-metadata-row-container-renderer.sticky.style-scope.ytd-video-secondary-info-renderer div#collapsible.style-scope.ytd-metadata-row-container-renderer ytd-metadata-row-renderer.style-scope.ytd-metadata-row-container-renderer div#content.style-scope.ytd-metadata-row-renderer yt-formatted-string.content.content-line-height-override.style-scope.ytd-metadata-row-renderer a.yt-simple-endpoint.style-scope.yt-formatted-string {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 11px;
+}
+/* Show more/less button */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer paper-button#more.style-scope.ytd-expander,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer paper-button#less.style-scope.ytd-expander {
+    margin: 10px auto 0px auto;
+    padding: 0px 10px 0px 10px;
+    width: 100%;
+    height: 28px;
+    color: #767676;
+    border-top: 1px solid #e2e2e2;
+}
+/* Show more/less button text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer paper-button#more.style-scope.ytd-expander yt-formatted-string.more-button.style-scope.ytd-video-secondary-info-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer paper-button#less.style-scope.ytd-expander yt-formatted-string.less-button.style-scope.ytd-video-secondary-info-renderer {
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 13px;
+    color: #767676;
+}
+/* Show more/less button hover text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer paper-button#more.style-scope.ytd-expander:hover yt-formatted-string.more-button.style-scope.ytd-video-secondary-info-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer ytd-expander.style-scope.ytd-video-secondary-info-renderer paper-button#less.style-scope.ytd-expander:hover yt-formatted-string.less-button.style-scope.ytd-video-secondary-info-renderer {
+    color: rgb(34, 34, 34);
+}
+
+
+/* Comments */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 10px 0px;
+    padding: 15px 50px 1px 15px;
+    background: var(--yt-spec-brand-background-solid);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+/* Comments top section */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer {
+    margin: 0px 0px 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e2e2e2;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer {
+    margin: 0px;
+    padding-bottom: 20px;
+}
+/* Comment counter */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer h2#count.style-scope.ytd-comments-header-renderer {
+    margin-right: 20px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer h2#count.style-scope.ytd-comments-header-renderer yt-formatted-string.count-text.style-scope.ytd-comments-header-renderer {
+    color: #555555;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+/* Comment sorting button */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer span#sort-menu.style-scope.ytd-comments-header-renderer yt-sort-filter-sub-menu-renderer.style-scope.ytd-comments-header-renderer yt-dropdown-menu.style-scope.yt-sort-filter-sub-menu-renderer.has-items paper-menu-button.style-scope.yt-dropdown-menu {
+    color: #333;
+    background: #f8f8f8;
+    border: solid 1px transparent;
+    border-color: #d3d3d3;
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer span#sort-menu.style-scope.ytd-comments-header-renderer yt-sort-filter-sub-menu-renderer.style-scope.ytd-comments-header-renderer yt-dropdown-menu.style-scope.yt-sort-filter-sub-menu-renderer.has-items paper-menu-button.style-scope.yt-dropdown-menu:hover {
+    border-color: #c6c6c6;
+    background: #f0f0f0;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.10);
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer span#sort-menu.style-scope.ytd-comments-header-renderer yt-sort-filter-sub-menu-renderer.style-scope.ytd-comments-header-renderer yt-dropdown-menu.style-scope.yt-sort-filter-sub-menu-renderer.has-items paper-menu-button.style-scope.yt-dropdown-menu div#trigger.style-scope.paper-menu-button paper-button#label.dropdown-trigger.style-scope.yt-dropdown-menu {
+    padding: 0px 1px 0px 10px;
+    flex-direction: row-reverse; 
+}
+/* Comment sorting button icon */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer span#sort-menu.style-scope.ytd-comments-header-renderer yt-sort-filter-sub-menu-renderer.style-scope.ytd-comments-header-renderer yt-dropdown-menu.style-scope.yt-sort-filter-sub-menu-renderer.has-items paper-menu-button.style-scope.yt-dropdown-menu div#trigger.style-scope.paper-menu-button paper-button#label.dropdown-trigger.style-scope.yt-dropdown-menu yt-icon#label-icon.style-scope.yt-dropdown-menu {
+    margin-top: -3px;
+    margin-left: 5px;
+    border: 1px solid transparent;
+    border-top-color: #333;
+    border-width: 4px 4px 0;
+    width: 0;
+    height: 0;
+}
+/* Comment sorting button text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#title.style-scope.ytd-comments-header-renderer span#sort-menu.style-scope.ytd-comments-header-renderer yt-sort-filter-sub-menu-renderer.style-scope.ytd-comments-header-renderer yt-dropdown-menu.style-scope.yt-sort-filter-sub-menu-renderer.has-items paper-menu-button.style-scope.yt-dropdown-menu div#trigger.style-scope.paper-menu-button paper-button#label.dropdown-trigger.style-scope.yt-dropdown-menu div#icon-label.style-scope.yt-dropdown-menu {
+    color: #555555;
+    font-weight: 500;
+    font-size: 11px;
+}
+/* Profile picture and comment textbox */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer {
+    position: relative;
+}
+/* Profile picture */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer yt-img-shadow#author-thumbnail.style-scope.ytd-comment-simplebox-renderer.no-transition img#img.style-scope.yt-img-shadow,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer yt-img-shadow#author-thumbnail.style-scope.ytd-comment-simplebox-renderer.no-transition {
+    width: 48px;
+    height: 48px;
+    border-radius: 0%;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer yt-img-shadow#author-thumbnail.style-scope.ytd-comment-simplebox-renderer.no-transition {
+    margin-right: 10px;
+}
+/* Textbox */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer div#placeholder-area.style-scope.ytd-comment-simplebox-renderer {
+    border: 1px solid #d5d5d5;
+    cursor: pointer;
+    margin-left: 11px;
+    min-height: 28px;
+    border-radius: 2px;
+    padding: 10px;
+    display: block;
+}
+/* Textbox arrow-inner */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer div#placeholder-area.style-scope.ytd-comment-simplebox-renderer::before {
+    content:"";
+    position: absolute;
+    border: 7px solid #fff;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    left: 60px;
+    top: 1px;
+    z-index: 1;
+}
+/* Textbox arrow-outer */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer div#placeholder-area.style-scope.ytd-comment-simplebox-renderer::after {
+    content:"";
+    position: absolute;
+    border: 6px solid #d5d5d5;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    left: 58px;
+    top: 0px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#header.style-scope.ytd-item-section-renderer ytd-comments-header-renderer.style-scope.ytd-item-section-renderer div#simple-box.style-scope.ytd-comments-header-renderer ytd-comment-simplebox-renderer.style-scope.ytd-comments-header-renderer div#placeholder-area.style-scope.ytd-comment-simplebox-renderer yt-formatted-string#simplebox-placeholder.style-scope.ytd-comment-simplebox-renderer {
+    color: #b8b8b8;
+    font-size: 13px;
+    line-height: 15px;
+}
+/* Comment spacing */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer {
+    margin-bottom: 30px;
+}
+/* Reply spacing */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer {
+    margin: 12px 0px 0px 0px;;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer {
+    margin: 0px;
+}
+/* Comment pinned */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-badge.style-scope.ytd-comment-renderer {
+    margin-bottom: 4px;
+}
+/* Comment pinned icon */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-badge.style-scope.ytd-comment-renderer div#pinned-comment-badge.style-scope.ytd-comment-renderer ytd-pinned-comment-badge-renderer.style-scope.ytd-comment-renderer yt-icon.style-scope.ytd-pinned-comment-badge-renderer {
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    margin-right: 0;
+}
+/* Comment pinned text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-badge.style-scope.ytd-comment-renderer div#pinned-comment-badge.style-scope.ytd-comment-renderer ytd-pinned-comment-badge-renderer.style-scope.ytd-comment-renderer yt-formatted-string#label.style-scope.ytd-pinned-comment-badge-renderer {
+    color: #767676;
+    font-size: 11px;
+    line-height: 16.9px
+}
+/* Author comment badge */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer span#author-comment-badge.style-scope.ytd-comment-renderer ytd-author-comment-badge-renderer.style-scope.ytd-comment-renderer {
+    margin: 0px;
+    --ytd-author-comment-badge-background-color: #008bec !important;
+    border-radius: 9px;
+    padding: 1px 6px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer span#author-comment-badge.style-scope.ytd-comment-renderer ytd-author-comment-badge-renderer.style-scope.ytd-comment-renderer a#name.yt-simple-endpoint.style-scope.ytd-author-comment-badge-renderer:hover {
+    text-decoration: underline;
+}
+/* Comment/reply profile picture */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#author-thumbnail.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.ytd-comment-renderer yt-img-shadow.style-scope.ytd-comment-renderer.no-transition,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#author-thumbnail.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.ytd-comment-renderer yt-img-shadow.style-scope.ytd-comment-renderer.no-transition {
+    border-radius: 0%;
+    margin-right: 10px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#author-thumbnail.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.ytd-comment-renderer yt-img-shadow.style-scope.ytd-comment-renderer.no-transition {
+    width: 48px;
+    height: 48px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#author-thumbnail.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.ytd-comment-renderer yt-img-shadow.style-scope.ytd-comment-renderer.no-transition {
+    width: 32px;
+    height: 32px;
+}
+/* Comment/Reply account name */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer {
+    margin-bottom: 0px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer a#author-text.yt-simple-endpoint.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer a#author-text.yt-simple-endpoint.style-scope.ytd-comment-renderer {
+    margin: 0px 6px 0px 0px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer a#author-text.yt-simple-endpoint.style-scope.ytd-comment-renderer span.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer a#author-text.yt-simple-endpoint.style-scope.ytd-comment-renderer span.style-scope.ytd-comment-renderer {
+    font-size: 13px;
+    line-height: 1.3em;
+    color: #128ee9;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer a#author-text.yt-simple-endpoint.style-scope.ytd-comment-renderer:hover span.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer a#author-text.yt-simple-endpoint.style-scope.ytd-comment-renderer:hover span.style-scope.ytd-comment-renderer {
+    text-decoration: underline;
+}
+/* Comment/reply date */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer yt-formatted-string.published-time-text.above-comment.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.yt-formatted-string,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer yt-formatted-string.published-time-text.above-comment.style-scope.ytd-comment-renderer {
+    margin-bottom: 5px;
+    font-size: 11px;
+    line-height: 1.3em;
+    color: #767676;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer yt-formatted-string.published-time-text.above-comment.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.yt-formatted-string,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer yt-formatted-string.published-time-text.above-comment.style-scope.ytd-comment-renderer a.yt-simple-endpoint.style-scope.yt-formatted-string {
+    color: #767676;
+}
+/* Comment/reply text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer {
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer div#content.style-scope.ytd-expander yt-formatted-string#content-text.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer div#content.style-scope.ytd-expander yt-formatted-string#content-text.style-scope.ytd-comment-renderer {
+    font-size: 13px;
+    line-height: 16.9px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer a {
+    --yt-endpoint-color: #167ac6;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer a:hover {
+    --yt-endpoint-hover-color: #167ac6;
+    text-decoration: underline;
+}
+/* Show more/less */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer div#content.style-scope.ytd-expander {
+    --ytd-expander-collapsed-height: 65px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer paper-button#more.style-scope.ytd-expander span.more-button-exp.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer paper-button#less.style-scope.ytd-expander span.less-button-exp.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer paper-button#more.style-scope.ytd-expander span.more-button-exp.style-scope.ytd-comment-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer paper-button#less.style-scope.ytd-expander span.less-button-exp.style-scope.ytd-comment-renderer {
+    color: #167ac6;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: 400;
+}
+/* Comment/reply action buttons */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer {
+    margin: 0px 0px 0px 6px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer {
+    margin-left: 0px;
+}
+#vote-count-left.ytd-comment-action-buttons-renderer[hidden] + #like-button.ytd-comment-action-buttons-renderer {
+    margin-left: 0px;
+}
+/* Toolbar icons (Thumbs, heart etc.) */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer yt-icon-button
+{
+    margin: 0px 4px 3px 3px;
+    padding: 0px;
+    width: 17px;
+    height: 17px;
+}
+/* Thumbs up counter */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer span#vote-count-middle.style-scope.ytd-comment-action-buttons-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer span#vote-count-middle.style-scope.ytd-comment-action-buttons-renderer {
+    color: #128ee9;
+    font-size: 12px;
+    font-weight: 400;
+}
+/* Reply button */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer::before,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer::before {
+    content: "\002022";
+    margin-left: 5px;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer ytd-button-renderer.style-scope.ytd-comment-action-buttons-renderer.style-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-text.size-default,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer ytd-button-renderer.style-scope.ytd-comment-action-buttons-renderer.style-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-text.size-default {
+    margin-left: 2px;
+    padding: 0px;
+    text-align: left;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer ytd-button-renderer.style-scope.ytd-comment-action-buttons-renderer.style-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-text.size-default yt-formatted-string#text.style-scope.ytd-button-renderer.style-text.size-default,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer ytd-button-renderer.style-scope.ytd-comment-action-buttons-renderer.style-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer.style-text.size-default yt-formatted-string#text.style-scope.ytd-button-renderer.style-text.size-default {
+    text-transform: capitalize;
+    color: #555;
+    font-weight: normal;
+    opacity: .75;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer ytd-button-renderer.style-scope.ytd-comment-action-buttons-renderer.style-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer:hover paper-button#button.style-scope.ytd-button-renderer.style-text.size-default yt-formatted-string#text.style-scope.ytd-button-renderer.style-text.size-default,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-comment-action-buttons-renderer#action-buttons.style-scope.ytd-comment-renderer div#toolbar.style-scope.ytd-comment-action-buttons-renderer div#reply-button-end.style-scope.ytd-comment-action-buttons-renderer ytd-button-renderer.style-scope.ytd-comment-action-buttons-renderer.style-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer:hover paper-button#button.style-scope.ytd-button-renderer.style-text.size-default yt-formatted-string#text.style-scope.ytd-button-renderer.style-text.size-default {
+    text-transform: capitalize;
+    opacity: 1;
+}
+/* View/hide replies button */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#more-replies.more-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#less-replies.less-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer {
+    margin: 0px;
+    padding: 0px;
+    flex-direction: row-reverse;
+}
+/* View/hide replies button text */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#more-replies.more-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#less-replies.less-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer {
+    margin-left: 2px;
+    margin-top: 2px;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    color: #2793e6;
+}
+/* View/hide replies button old icon */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#more-replies.more-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer::after,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#less-replies.less-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer::after {
+    margin: 0px 0px 0px 3px;
+    padding: 0px;
+    background-size: auto;
+    width: 16px;
+    height: 16px;
+    content: "";
+    display: inline-block;
+    opacity: .7;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#more-replies.more-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer::after {
+    background: no-repeat url(commentSymbols.png) -152px -20px;
+    vertical-align: text-bottom;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#less-replies.less-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer::after {
+    background: no-repeat url(commentSymbols.png) -152px -74px;
+    vertical-align: text-bottom;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#more-replies.more-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer:hover paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer::after,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#less-replies.less-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer:hover paper-button#button.style-scope.ytd-button-renderer yt-formatted-string#text.style-scope.ytd-button-renderer::after {
+    opacity: 1;
+}
+/* View replies button new icon */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#more-replies.more-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-icon.style-scope.ytd-button-renderer,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer ytd-button-renderer#less-replies.less-button-exp.style-scope.ytd-comment-replies-renderer a.yt-simple-endpoint.style-scope.ytd-button-renderer paper-button#button.style-scope.ytd-button-renderer yt-icon.style-scope.ytd-button-renderer {
+    display: none;
+}
+
+
+
+
+/* Sidebar width */
+ytd-watch-flexy {
+    --ytd-watch-flexy-sidebar-width: 416px;
+}
+/* Sidebar */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 0px 10px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+/* Chat */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy ytd-live-chat-frame#chat.style-scope.ytd-watch-flexy,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-live-chat-frame#chat.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 10px 0px;
+    background: var(--yt-spec-brand-background-solid);
+    border: 0px;
+    box-shadow: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+/* Recommended bar */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy {
+    margin: 0px 0px 10px 0px;
+    padding: 13px 15px 15px 10px;
+    background: var(--yt-spec-brand-background-solid);
+    box-shadow: 0 1px 2px rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+/* UpNext and Autoplay */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy #upnext,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy #autoplay,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #upnext,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #autoplay {
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 500; 
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy #upnext,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #upnext {
+    color: rgb(34, 34, 34);
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy #autoplay,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #autoplay {
+    color: rgb(118, 118, 118);
+}
+/* Remove margin from Autoplay slider */
+ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-autoplay-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#head.style-scope.ytd-compact-autoplay-renderer paper-toggle-button#toggle.style-scope.ytd-compact-autoplay-renderer div.toggle-container.style-scope.paper-toggle-button,
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-autoplay-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#head.style-scope.ytd-compact-autoplay-renderer paper-toggle-button#toggle.style-scope.ytd-compact-autoplay-renderer div.toggle-container.style-scope.paper-toggle-button {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+/* Video cards */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-autoplay-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#contents.style-scope.ytd-compact-autoplay-renderer:hover ytd-compact-video-renderer.style-scope.ytd-compact-autoplay-renderer div#dismissable.style-scope.ytd-compact-video-renderer div.details.style-scope.ytd-compact-video-renderer div.metadata.style-scope.ytd-compact-video-renderer a.yt-simple-endpoint.style-scope.ytd-compact-video-renderer h3.style-scope.ytd-compact-video-renderer span#video-title.style-scope.ytd-compact-video-renderer, /* Widescreen bar next */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#dismissable.style-scope.ytd-compact-video-renderer:hover div.details.style-scope.ytd-compact-video-renderer div.metadata.style-scope.ytd-compact-video-renderer a.yt-simple-endpoint.style-scope.ytd-compact-video-renderer h3.style-scope.ytd-compact-video-renderer span#video-title.style-scope.ytd-compact-video-renderer, /* Widescreen bar recommended */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-autoplay-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#contents.style-scope.ytd-compact-autoplay-renderer:hover ytd-compact-video-renderer.style-scope.ytd-compact-autoplay-renderer div#dismissable.style-scope.ytd-compact-video-renderer div.details.style-scope.ytd-compact-video-renderer div.metadata.style-scope.ytd-compact-video-renderer a.yt-simple-endpoint.style-scope.ytd-compact-video-renderer h3.style-scope.ytd-compact-video-renderer span#video-title.style-scope.ytd-compact-video-renderer, /* Small screen bar next */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#dismissable.style-scope.ytd-compact-video-renderer:hover div.details.style-scope.ytd-compact-video-renderer div.metadata.style-scope.ytd-compact-video-renderer a.yt-simple-endpoint.style-scope.ytd-compact-video-renderer h3.style-scope.ytd-compact-video-renderer span#video-title.style-scope.ytd-compact-video-renderer /* Small screen bar recommended */
+{
+    color: #167ac6;
+}
