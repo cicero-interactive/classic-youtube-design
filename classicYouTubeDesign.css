@@ -412,7 +412,7 @@ ytd-app[is-watch-page] {
     padding-right: 15px;
 }
 #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy {
-    max-width: 1755px;
+    max-width: 1706px;
     margin-top: 10px;
     box-sizing: border-box;
 }
@@ -421,11 +421,12 @@ ytd-app[is-watch-page] {
     margin: 0px;
 }
 #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy {
-    margin-left: 24px;
+    min-width: var(--ytd-watch-flexy-min-player-width);
+    margin-left: 0px;
 }
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
-    margin-left: 12px;
-    padding-right: 12px;
+    margin-left: 0px;
+    padding-right: 0px;
 }
 @media only screen and (max-width: 1016px) {
     #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy {
@@ -974,7 +975,7 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy,
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy {
     margin: 0px 0px 10px 0px;
-    padding: 13px 15px 15px 10px;
+    padding: 13px 15px 15px 15px;
     background: var(--yt-spec-brand-background-solid);
     box-shadow: 0 1px 2px rgba(0,0,0,.1);
     box-sizing: border-box;
@@ -1009,4 +1010,7 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy div#items.style-scope.ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer.style-scope.ytd-watch-next-secondary-results-renderer div#dismissable.style-scope.ytd-compact-video-renderer:hover div.details.style-scope.ytd-compact-video-renderer div.metadata.style-scope.ytd-compact-video-renderer a.yt-simple-endpoint.style-scope.ytd-compact-video-renderer h3.style-scope.ytd-compact-video-renderer span#video-title.style-scope.ytd-compact-video-renderer /* Small screen bar recommended */
 {
     color: #167ac6;
+}
+ytd-compact-video-renderer.ytd-watch-next-secondary-results-renderer:not([expansion="collapsed"]).ytd-watch-next-secondary-results-renderer, ytd-compact-radio-renderer.ytd-watch-next-secondary-results-renderer, ytd-compact-movie-renderer.ytd-watch-next-secondary-results-renderer, ytd-compact-playlist-renderer.ytd-watch-next-secondary-results-renderer, ytd-compact-promoted-video-renderer.ytd-watch-next-secondary-results-renderer, ytd-promoted-sparkles-web-renderer.ytd-watch-next-secondary-results-renderer {
+    margin-bottom: 15px;
 }
