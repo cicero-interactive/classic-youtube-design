@@ -525,7 +525,7 @@ ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-po
     text-transform: capitalize;
 }
 
-/* Profile picture */
+/* Channel picture */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer yt-img-shadow#avatar.style-scope.ytd-video-owner-renderer.no-transition {
     border-radius: 0%;
 }
@@ -534,7 +534,8 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 }
 /* Channel info */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer div#upload-info.style-scope.ytd-video-owner-renderer ytd-channel-name#channel-name.style-scope.ytd-video-owner-renderer div#container.style-scope.ytd-channel-name div#text-container.style-scope.ytd-channel-name yt-formatted-string#text.style-scope.ytd-channel-name a.yt-simple-endpoint.style-scope.yt-formatted-string {
-    height: 22px;
+    /* height: 22px; */
+    /* Implement when javascript for moving subscribe button is ready */
 }
 
 /* Video description */
