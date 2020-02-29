@@ -7,8 +7,7 @@
 ytd-app {
     --app-drawer-width: 230px;
     --app-drawer-content-container_-_background-color: $yt-main-app-background;
-    --yt-spec-general-background-a: #f1f1f1;
-    background: var(--yt-spec-general-background-a);
+    background: var(--yt-spec-general-background-b);
 }
 ytd-button-renderer.style-scope.style-suggestive,
 ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer {
@@ -248,7 +247,7 @@ ytd-guide-entry-renderer yt-img-shadow {
 
 /* Left bar mini */
 ytd-mini-guide-renderer.ytd-app {
-    top: 50px;
+    top: var(--ytd-masthead-height, 50px);
     border-right: 1px solid #e8e8e8;
 }
 
@@ -403,7 +402,7 @@ ytd-video-meta-block[rich-meta] #channel-name.ytd-video-meta-block, ytd-video-me
 ===================
 */
 ytd-app[is-watch-page] {
-    --yt-spec-general-background-a: #f1f1f1;
+    background-color: var(--yt-spec-general-background-b) !important;
 }
 #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
     --ytd-toolbar-offset: var(--ytd-masthead-height, 50px);
@@ -412,7 +411,9 @@ ytd-app[is-watch-page] {
     padding-right: 15px;
 }
 #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy {
-    max-width: 1706px;
+    max-width: calc(1706px + 48px);
+    padding-left: 24px;
+    padding-right: 24px;
     margin-top: 10px;
     box-sizing: border-box;
 }
@@ -427,16 +428,6 @@ ytd-app[is-watch-page] {
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
     margin-left: 0px;
     padding-right: 0px;
-}
-@media only screen and (max-width: 1016px) {
-    #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy {
-    margin-left: 24px;
-    margin-right: 24px;
-}
-html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
-    margin-left: 0px;
-    padding-right: 0px;
-}
 }
 /* Video player */
 #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#player.style-scope.ytd-watch-flexy {
@@ -530,6 +521,17 @@ ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-po
     text-transform: capitalize;
 }
 
+/* Profile picture */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer yt-img-shadow#avatar.style-scope.ytd-video-owner-renderer.no-transition {
+    border-radius: 0%;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer a.yt-simple-endpoint.style-scope.ytd-video-owner-renderer yt-img-shadow#avatar.style-scope.ytd-video-owner-renderer.no-transition {
+    margin-right: 10px;
+}
+/* Channel info */
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy div#meta-contents.style-scope.ytd-watch-flexy ytd-video-secondary-info-renderer.style-scope.ytd-watch-flexy div#container.style-scope.ytd-video-secondary-info-renderer div#top-row.style-scope.ytd-video-secondary-info-renderer ytd-video-owner-renderer.style-scope.ytd-video-secondary-info-renderer div#upload-info.style-scope.ytd-video-owner-renderer ytd-channel-name#channel-name.style-scope.ytd-video-owner-renderer div#container.style-scope.ytd-channel-name div#text-container.style-scope.ytd-channel-name yt-formatted-string#text.style-scope.ytd-channel-name a.yt-simple-endpoint.style-scope.yt-formatted-string {
+    height: 22px;
+}
 
 /* Video description */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#meta.style-scope.ytd-watch-flexy {
@@ -743,7 +745,7 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 }
 /* Reply spacing */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer div#body.style-scope.ytd-comment-renderer {
-    margin: 12px 0px 0px 0px;;
+    margin: 12px 0px 0px 0px;
 }
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer div#replies.style-scope.ytd-comment-thread-renderer ytd-comment-replies-renderer.style-scope.ytd-comment-thread-renderer div#expander.style-scope.ytd-comment-replies-renderer div#expander-contents.style-scope.ytd-comment-replies-renderer div#loaded-replies.style-scope.ytd-comment-replies-renderer ytd-comment-renderer.style-scope.ytd-comment-replies-renderer {
     margin: 0px;
@@ -769,9 +771,16 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 /* Author comment badge */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer span#author-comment-badge.style-scope.ytd-comment-renderer ytd-author-comment-badge-renderer.style-scope.ytd-comment-renderer {
     margin: 0px;
-    --ytd-author-comment-badge-background-color: #008bec !important;
     border-radius: 9px;
     padding: 1px 6px;
+    --ytd-author-comment-badge-background-color: #008bec !important;
+    --ytd-author-comment-badge-icon-color: white;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer span#author-comment-badge.style-scope.ytd-comment-renderer ytd-author-comment-badge-renderer.style-scope.ytd-comment-renderer a#name.yt-simple-endpoint.style-scope.ytd-author-comment-badge-renderer ytd-channel-name#channel-name.style-scope.ytd-author-comment-badge-renderer div#container.style-scope.ytd-channel-name div#text-container.style-scope.ytd-channel-name yt-formatted-string#text.style-scope.ytd-channel-name {
+    color: white;
+}
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer span#author-comment-badge.style-scope.ytd-comment-renderer ytd-author-comment-badge-renderer.style-scope.ytd-comment-renderer yt-icon#icon.style-scope.ytd-author-comment-badge-renderer {
+    fill: var(--ytd-author-comment-badge-icon-color);
 }
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer div#header.style-scope.ytd-comment-renderer div#header-author.style-scope.ytd-comment-renderer span#author-comment-badge.style-scope.ytd-comment-renderer ytd-author-comment-badge-renderer.style-scope.ytd-comment-renderer a#name.yt-simple-endpoint.style-scope.ytd-author-comment-badge-renderer:hover {
     text-decoration: underline;
@@ -832,10 +841,10 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
     font-size: 13px;
     line-height: 16.9px;
 }
-html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer a {
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer div#content.style-scope.ytd-expander yt-formatted-string#content-text.style-scope.ytd-comment-renderer a {
     --yt-endpoint-color: #167ac6;
 }
-html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer a:hover {
+html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy ytd-item-section-renderer#sections.style-scope.ytd-comments div#contents.style-scope.ytd-item-section-renderer ytd-comment-thread-renderer.style-scope.ytd-item-section-renderer ytd-comment-renderer#comment.style-scope.ytd-comment-thread-renderer div#body.style-scope.ytd-comment-renderer div#main.style-scope.ytd-comment-renderer ytd-expander#expander.expander-exp.style-scope.ytd-comment-renderer div#content.style-scope.ytd-expander yt-formatted-string#content-text.style-scope.ytd-comment-renderer a:hover {
     --yt-endpoint-hover-color: #167ac6;
     text-decoration: underline;
 }
@@ -951,12 +960,9 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 
 
 
-/* Sidebar width */
-ytd-watch-flexy {
-    --ytd-watch-flexy-sidebar-width: 416px;
-}
 /* Sidebar */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy {
+    --ytd-watch-flexy-sidebar-width: 416px;
     margin: 0px 0px 0px 10px;
     padding: 0px;
     box-sizing: border-box;
@@ -985,7 +991,6 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy #autoplay,
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #upnext,
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #autoplay {
-    text-transform: capitalize;
     font-size: 13px;
     font-weight: 500; 
 }
@@ -995,6 +1000,7 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 }
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#secondary.style-scope.ytd-watch-flexy div#secondary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy #autoplay,
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy div#related.style-scope.ytd-watch-flexy ytd-watch-next-secondary-results-renderer.style-scope.ytd-watch-flexy #autoplay {
+    text-transform: capitalize;
     color: rgb(118, 118, 118);
 }
 /* Remove margin from Autoplay slider */
