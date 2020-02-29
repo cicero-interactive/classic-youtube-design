@@ -275,9 +275,18 @@ ytd-rich-grid-renderer {
         width: 438px;
     }
 }
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 750px) {
     ytd-rich-grid-renderer {
         width: 644px;
+    }
+    html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-disabled div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media only screen and (min-width: 975px) {
+    ytd-rich-grid-renderer {
+        width: 850px;
     }
 }
 @media only screen and (min-width: 1175px) {
@@ -338,12 +347,7 @@ ytd-rich-section-renderer,
     margin-bottom: 15px;
 }
 
-
-/* 
-===================
-    Video cards
-===================
-*/
+/* Video cards*/
 
 ytd-rich-item-renderer {
     width: 196px;
