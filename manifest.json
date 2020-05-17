@@ -4,7 +4,7 @@
 	"version": "0.1.1",
 
 	"default_locale": "en",
-	"description": "Recreates the classic YouTube experience within the new polymer layout.",
+	"description": "__MSG_ext_desc__",
 	"homepage_url": "https://github.com/Cicero-Interactive/Classic-YouTube-Design",
 	"author": "Cicero Interactive",
 
