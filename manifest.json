@@ -2,13 +2,22 @@
 	"manifest_version": 2,
 	"name": "Classic YouTube Design",
 	"version": "0.1.1",
+
+	"default_locale": "en",
 	"description": "Recreates the classic YouTube experience within the new polymer layout.",
 	"homepage_url": "https://github.com/Cicero-Interactive/Classic-YouTube-Design",
 	"author": "Cicero Interactive",
 
+
 	"icons": {
-		"48": "icons/icon48x48.png"
+		"48": "icons/48.png"
 	},
+    "browser_action": {
+        "default_icon": {
+            "48": "assets/icons/48g.png"
+        },
+        "default_popup": "popup.html"
+    },
 
 	"content_scripts": [
 		{
@@ -16,5 +25,19 @@
 			"css": ["classicYouTubeDesign.css"],
 			"js": ["classicYouTubeDesign.js"]
 		}
-	]
+	],
+    "background": {
+        "persistent": false,
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "options_ui": {
+        "page": "popup.html"
+    },
+    "permissions": [
+        "https://www.youtube.com/",
+        "contextMenus",
+        "storage"
+    ]
 }
