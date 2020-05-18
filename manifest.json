@@ -10,11 +10,11 @@
 
 
 	"icons": {
-		"48": "icons/48.png"
+		"48": "assets/ico/48.png"
 	},
     "browser_action": {
         "default_icon": {
-            "48": "assets/icons/48g.png"
+            "48": "assets/ico/48.png"
         },
         "default_popup": "popup.html"
     },
