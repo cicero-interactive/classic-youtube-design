@@ -1,6 +1,8 @@
 var classicYoutubeActivated = true
 var watchedOverlayActivated = true
 
+localizeHtmlPage();
+load_options();
 
 
 // Save options to chrome.storage
@@ -62,4 +64,30 @@ checkboxes.forEach(checkbox => {
 	})
 })
 
-load_options();
+// i18n for HTML pages
+function localizeHtmlPage() {
+	//Localize by replacing __MSG_***__ meta tags
+    var objects = document.getElementsByTagName('html');
+    for (var j = 0; j < objects.length; j++) {
+        var obj = objects[j];
+
+        var oldHTML = obj.innerHTML.toString();
+        var newHTML = oldHTML.replace(/__MSG_(\w+)__/g, function(match, msg) {
+			return msg ? chrome.i18n.getMessage(msg) : "text not found";
+		})
+		.replace("__MSG_@@ui_locale__", chrome.i18n.getMessage("@@ui_locale"))
+		.replace("__MSG_@@watched_overlay_img__", function(match, msg) {
+			var locale = "EN";
+			switch(chrome.i18n.getMessage("@@ui_locale")) {
+				case "de":
+					locale = chrome.i18n.getMessage("@@ui_locale").toUpperCase();
+					break;
+			}
+			return "watchedOverlay" + locale + ".png";
+		});
+
+        if(newHTML != oldHTML) {
+			obj.innerHTML = newHTML;
+        }
+    }
+}

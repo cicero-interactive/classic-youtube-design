@@ -4,5 +4,20 @@
     },
     "ext_desc": {
         "message": "Recreates the classic YouTube experience within the new polymer layout."
+    },
+    "general": {
+        "message": "General"
+    },
+    "activate_classic_youtube_design": {
+        "message": "Activate Classic YouTube Design"
+    },
+    "watched_overlay": {
+        "message": "\"Watched\" Overlay"
+    },
+    "activate_watched_overlay": {
+        "message": "Activate \"Watched\" Overlay"
+    },
+    "about": {
+        "message": "About"
     }
 }
