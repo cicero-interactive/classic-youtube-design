@@ -7,31 +7,31 @@ load_options();
 
 // Save options to chrome.storage
 function save_options() {
-var classicYoutubeActivated = document.getElementById('classicYoutubeCheckox').checked;
-console.log(classicYoutubeActivated);
-var watchedOverlayActivated = document.getElementById('watchedOverlayCheckbox').checked;
-console.log(watchedOverlayActivated);
-chrome.storage.sync.set({
-	classicYoutubeActivated: classicYoutubeActivated,
-	watchedOverlayActivated: watchedOverlayActivated
-});
+	var classicYoutubeActivated = document.getElementById('classicYoutubeCheckox').checked;
+	console.log(classicYoutubeActivated);
+	var watchedOverlayActivated = document.getElementById('watchedOverlayCheckbox').checked;
+	console.log(watchedOverlayActivated);
+	chrome.storage.sync.set({
+		classicYoutubeActivated: classicYoutubeActivated,
+		watchedOverlayActivated: watchedOverlayActivated
+	});
 }
 
 // Load options from chrome.storage
 function load_options() {
-chrome.storage.sync.get(function(items) {
-	// Use default values, if necessary
-	if (items.classicYoutubeActivated == null) {
-		items.classicYoutubeActivated = true;
-	}
-	if (items.watchedOverlayActivated == null) {
-		items.watchedOverlayActivated = true;
-	}
-	classicYoutubeActivated = items.classicYoutubeActivated;
-	watchedOverlayActivated = items.watchedOverlayActivated;
-	document.getElementById('classicYoutubeCheckox').checked = classicYoutubeActivated;
-	document.getElementById('watchedOverlayCheckbox').checked = watchedOverlayActivated;
-});
+	chrome.storage.sync.get(function(items) {
+		// Use default values, if necessary
+		if (items.classicYoutubeActivated == null) {
+			items.classicYoutubeActivated = true;
+		}
+		if (items.watchedOverlayActivated == null) {
+			items.watchedOverlayActivated = true;
+		}
+		classicYoutubeActivated = items.classicYoutubeActivated;
+		watchedOverlayActivated = items.watchedOverlayActivated;
+		document.getElementById('classicYoutubeCheckox').checked = classicYoutubeActivated;
+		document.getElementById('watchedOverlayCheckbox').checked = watchedOverlayActivated;
+	});
 }
 
 
