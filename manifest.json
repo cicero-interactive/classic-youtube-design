@@ -22,8 +22,8 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.youtube.com/*"],
-			"css": ["classicYouTubeDesign.css"],
-			"js": ["classicYouTubeDesign.js"]
+			"css": ["injections/classicYouTubeDesign.css"],
+			"js": ["injections/classicYouTubeDesign.js"]
 		}
 	],
     "background": {
