@@ -22,8 +22,7 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.youtube.com/*"],
-			"css": ["injections/classicYouTubeDesign.css"],
-			"js": ["injections/classicYouTubeDesign.js"]
+			"js": ["injector.js"]
 		}
 	],
     "background": {
@@ -32,12 +31,15 @@
             "background.js"
         ]
     },
+    "web_accessible_resources": [
+        "injections/*"
+    ],
     "options_ui": {
         "page": "popup.html"
     },
     "permissions": [
         "https://www.youtube.com/",
-        "contextMenus",
+        "tabs",
         "storage"
     ]
 }
