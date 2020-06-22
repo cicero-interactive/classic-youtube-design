@@ -17,6 +17,7 @@ We cannot guarantee that there are no issues. This addon is still in early devel
 
 ## The future
 Our next goals are:
+- [ } Adding a configuration popup menu for adjustable preferences
 - [ ] Implementing support for all subpages
 - [ ] Adding JavaScript to rearrange some HTML elements to more closely resemble the old layout
 - [ ] Adding dark-mode support
