@@ -22,15 +22,10 @@
 	"content_scripts": [
 		{
 			"matches": ["*://*.youtube.com/*"],
-			"js": ["injector.js"]
+			"js": ["injector.js"],
+            "run_at" : "document_start"
 		}
 	],
-    "background": {
-        "persistent": false,
-        "scripts": [
-            "background.js"
-        ]
-    },
     "web_accessible_resources": [
         "injections/*"
     ],
