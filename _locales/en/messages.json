@@ -19,5 +19,10 @@
     },
     "about": {
         "message": "About"
+    },
+
+
+    "watched": {
+        "message": "Watched"
     }
 }
