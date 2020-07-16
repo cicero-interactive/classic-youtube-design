@@ -19,7 +19,14 @@ setTimeout(function() {
 		});
 	};
 	if (watchedOverlayActivated == true) {
-	
+		docReady(function() {
+			// DOM is loaded and ready for manipulation here
+			var link = document.createElement("link");
+			link.href = chrome.extension.getURL("injections/watchedOverlay.css");
+			link.type = "text/css";
+			link.rel = "stylesheet";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		});
 	};
 }, 1);
 
