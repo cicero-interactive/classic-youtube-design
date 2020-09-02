@@ -36,5 +36,12 @@
         "https://www.youtube.com/",
         "tabs",
         "storage"
-    ]
+    ],
+
+    "browser_specific_settings": {
+        "gecko": {
+          "id": "{08d012da-e630-4c25-b65a-dba2241367c9}",
+          "strict_min_version": "42.0"
+        }
+      }
 }
