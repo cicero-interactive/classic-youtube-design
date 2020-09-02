@@ -12,36 +12,36 @@
 	"icons": {
 		"48": "assets/ico/48.png"
 	},
-    "browser_action": {
-        "default_icon": {
-            "48": "assets/ico/48.png"
-        },
-        "default_popup": "popup.html"
-    },
+	"browser_action": {
+		"default_icon": {
+			"48": "assets/ico/48.png"
+		},
+		"default_popup": "popup.html"
+	},
 
 	"content_scripts": [
 		{
 			"matches": ["*://*.youtube.com/*"],
 			"js": ["injector.js"],
-            "run_at" : "document_start"
+			"run_at" : "document_start"
 		}
 	],
-    "web_accessible_resources": [
-        "injections/*"
-    ],
-    "options_ui": {
-        "page": "popup.html"
-    },
-    "permissions": [
-        "https://www.youtube.com/",
-        "tabs",
-        "storage"
-    ],
+	"web_accessible_resources": [
+		"injections/*"
+	],
+	"options_ui": {
+		"page": "popup.html"
+	},
+	"permissions": [
+		"https://www.youtube.com/",
+		"tabs",
+		"storage"
+	],
 
-    "browser_specific_settings": {
-        "gecko": {
-          "id": "{08d012da-e630-4c25-b65a-dba2241367c9}",
-          "strict_min_version": "42.0"
-        }
-      }
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{08d012da-e630-4c25-b65a-dba2241367c9}",
+			"strict_min_version": "42.0"
+		}
+	}
 }
