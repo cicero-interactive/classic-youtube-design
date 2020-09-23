@@ -5,7 +5,7 @@
 */
 
 ytd-app {
-    --app-drawer-width: 230px;
+    --app-drawer-width: var(--cyd__app-drawer-width);
     --app-drawer-content-container_-_background-color: $yt-main-app-background;
     background: var(--yt-spec-general-background-b);
 }
@@ -254,7 +254,7 @@ ytd-mini-guide-renderer.ytd-app {
 
 /* 
 ===================
-    Main page 
+    Home page 
 ===================
 */
 
@@ -350,10 +350,15 @@ ytd-rich-section-renderer,
 /* Video cards*/
 
 ytd-rich-item-renderer {
-    width: 196px;
+    width: var(--cyd__video-thumbnail-homepage-width);
     margin: 0px 10px 12px 0px;
     margin-bottom: 12px;
 }
+
+ytd-thumbnail.ytd-rich-grid-video-renderer {
+    height: var(--cyd__video-thumbnail-homepage-height);
+}
+
 ytd-rich-item-renderer:hover yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string {
     color: rgb(22, 122, 198);
 }
