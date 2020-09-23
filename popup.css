@@ -1,3 +1,10 @@
+:root {
+	--color-alert-red: #f44336;
+	--color-alert-green: #4CAF50;
+	--color-alert-blue: #2196F3;
+	--color-alert-yellow: #ff9800;
+}
+
 body {
 	margin: 0px;
 	min-width: 580px;
@@ -57,3 +64,24 @@ main {
 	width: 80px;
 	height: 40px;
 } */
+
+.alert {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 15px 0px;
+	padding: 10px;
+	color: white;
+}
+.alert--red {
+	background: var(--color-alert-red);
+}
+.alert--green {
+	background: var(--color-alert-green);
+}
+.alert--blue {
+	background: var(--color-alert-blue);
+}
+.alert--yellow {
+	background: var(--color-alert-yellow);
+}
