@@ -11,6 +11,9 @@
     "activate_classic_youtube_design": {
         "message": "Aktiviere klassisches YouTube-Design"
     },
+    "please_note_to_apply_changes_you_have_to_reload_page": {
+        "message": "Beachten Sie: Um vorgenommene Änderungen anzuwenden, müssen Sie die Seite neu laden."
+    },
     "watched_overlay": {
         "message": "\"Angesehen\"-Overlay"
     },
