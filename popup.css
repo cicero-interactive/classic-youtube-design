@@ -72,6 +72,7 @@ main {
 	margin: 15px 0px;
 	padding: 10px;
 	color: white;
+	border-radius: 10px;
 }
 .alert--red {
 	background: var(--color-alert-red);
