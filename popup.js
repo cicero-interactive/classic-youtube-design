@@ -9,7 +9,7 @@ load_options();
 function save_options() {
 	var classicYoutubeActivated = document.getElementById('classicYoutubeCheckox').checked;
 	console.log(classicYoutubeActivated);
-	var watchedOverlayActivated = document.getElementById('watchedOverlayCheckbox').checked;
+	// var watchedOverlayActivated = document.getElementById('watchedOverlayCheckbox').checked;
 	console.log(watchedOverlayActivated);
 	chrome.storage.sync.set({
 		classicYoutubeActivated: classicYoutubeActivated,
@@ -30,7 +30,7 @@ function load_options() {
 		classicYoutubeActivated = items.classicYoutubeActivated;
 		watchedOverlayActivated = items.watchedOverlayActivated;
 		document.getElementById('classicYoutubeCheckox').checked = classicYoutubeActivated;
-		document.getElementById('watchedOverlayCheckbox').checked = watchedOverlayActivated;
+		// document.getElementById('watchedOverlayCheckbox').checked = watchedOverlayActivated;
 	});
 }
 
