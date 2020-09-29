@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Classic YouTube Design",
-	"version": "0.2.0",
+	"version": "0.2.0.1",
 	"version_name": "0.2.0 preview 1",
 
 	"default_locale": "en",
