@@ -355,41 +355,41 @@ ytd-rich-item-renderer {
     margin-bottom: 12px;
 }
 
-ytd-thumbnail.ytd-rich-grid-video-renderer {
+ytd-thumbnail.ytd-rich-grid-media {
     height: var(--cyd__video-thumbnail-homepage-height);
 }
 
 ytd-rich-item-renderer:hover yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string {
     color: rgb(22, 122, 198);
 }
-ytd-rich-grid-video-renderer[mini-mode] #video-title.ytd-rich-grid-video-renderer {
+ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media {
     font-size: 13px;
     line-height: 16.9px;
-    
+
 }
 /* Thumbnail container */
-html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-3-columns div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer ytd-rich-item-renderer.style-scope.ytd-rich-grid-renderer div#content.style-scope.ytd-rich-item-renderer ytd-rich-grid-video-renderer.style-scope.ytd-rich-item-renderer div#dismissable.style-scope.ytd-rich-grid-video-renderer ytd-thumbnail.style-scope.ytd-rich-grid-video-renderer {
+#dismissable > ytd-thumbnail {
     margin-bottom: 4px;
     display: block;
 }
 /* Channel picture */
-#avatar-link.ytd-rich-grid-video-renderer {
+#avatar-link.ytd-rich-grid-media {
     display: none;
 }
 /* Video info */
-#video-title.ytd-rich-grid-video-renderer {
+#video-title.ytd-rich-grid-media {
     font-size: 13px;
     line-height: 16.9px;
     color: rgb(22, 122, 198);
 }
-#video-title.ytd-rich-grid-video-renderer:hover {
+#video-title.ytd-rich-grid-media:hover {
     text-decoration: underline;
 }
-h3.ytd-rich-grid-video-renderer,
-ytd-rich-grid-video-renderer[mini-mode] h3.ytd-rich-grid-video-renderer {
+h3.ytd-rich-grid-media,
+ytd-rich-grid-media[mini-mode] h3.ytd-rich-grid-media {
     margin: 0px;
 }
-#meta.ytd-rich-grid-video-renderer {
+#meta.ytd-rich-grid-media {
     padding-right: 20px;
 }
 yt-formatted-string[has-link-only_]:not([force-default-style]) a.yt-simple-endpoint.yt-formatted-string:hover {
