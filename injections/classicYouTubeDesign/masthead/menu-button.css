@@ -1,0 +1,19 @@
+/*
+===============================
+    Hamburger menu button
+===============================
+
+(See https://github.com/Cicero-Interactive/Classic-YouTube-Design/wiki/Tweaks:-Masthead#hamburger-menu-button)
+*/
+
+/* html body ytd-app div#content.style-scope.ytd-app div#masthead-container.style-scope.ytd-app ytd-masthead#masthead.masthead-finish div#container.style-scope.ytd-masthead div#start.style-scope.ytd-masthead yt-icon-button#guide-button.style-scope.ytd-masthead */
+#guide-button.ytd-masthead {
+    margin: 0px 0px 0px -7px;
+}
+#guide-button #guide-icon {
+    width: 18px;
+    color: rgb(150, 150, 150);
+}
+#guide-button #guide-icon:hover {
+    color: rgb(50, 50, 50);
+}
