@@ -71,72 +71,9 @@ ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer #button
 
 
 
-/* 
+/*
 ===================
-    Navbar 
-===================
-*/
-
-#container.ytd-masthead {
-    height: 50px;
-    box-sizing: border-box;
-    background: var(--yt-spec-brand-background-solid);
-    border-bottom: 1px solid #e8e8e8;
-    min-width: 0;
-    padding-bottom: 8px;
-    padding-top: 7px;
-    padding-left: 30px;
-    padding-right: 30px;
-    position: relative;
-}
-#guide-button {
-    margin: 0px 0px 0px -7px !important;
-    padding: 0px 10px;
-}
-#guide-button #guide-icon {
-    width: 18px;
-    color: rgb(150, 150, 150);
-}
-#guide-button #guide-icon:hover {
-    color: rgb(50, 50, 50);
-}
-ytd-searchbox#search {
-    margin-left: 38px;
-}
-ytd-searchbox#search > #search-form {
-    max-width: 650px;
-    height: 29px;
-    padding: 0px;
-}
-ytd-searchbox#search > #search-form > div#container {
-    padding: 0px;
-    border-radius: 0px;
-}
-ytd-searchbox#search > #search-form input {
-    line-height: 23px;
-    margin: 0px;
-    padding: 2px 6px;
-}
-ytd-searchbox#search > #search-form input::placeholder {
-    color: #767676;
-}
-ytd-searchbox#search > #search-form > button#search-icon-legacy {
-    width: 66px;
-}
-#logo-icon-container.ytd-topbar-logo-renderer {
-    width: 100px;
-    height: 30px;
-}
-#search-form.ytd-searchbox {
-    margin: 0px;
-}
-
-
-
-
-/* 
-===================
-    Left navbar 
+    Left navbar
 ===================
 */
 #guide-spacer.ytd-app {
