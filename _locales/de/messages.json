@@ -1,31 +1,31 @@
 {
-    "ext_name": {
-        "message": "Classic YouTube Design"
-    },
-    "ext_desc": {
-        "message": "Recreates the classic YouTube experience within the new polymer layout."
-    },
-    "general": {
-        "message": "Allgemein"
-    },
-    "activate_classic_youtube_design": {
-        "message": "Aktiviere klassisches YouTube-Design"
-    },
-    "please_note_to_apply_changes_you_have_to_reload_page": {
-        "message": "Beachten Sie: Um vorgenommene Änderungen anzuwenden, müssen Sie die Seite neu laden."
-    },
-    "watched_overlay": {
-        "message": "\"Angesehen\"-Overlay"
-    },
-    "activate_watched_overlay": {
-        "message": "Aktiviere \"Angesehen\"-Overlay"
-    },
-    "about": {
-        "message": "Über"
-    },
+	"ext_name": {
+		"message": "Classic YouTube Design"
+	},
+	"ext_desc": {
+		"message": "Recreates the classic YouTube experience within the new polymer layout."
+	},
+	"general": {
+		"message": "Allgemein"
+	},
+	"activate_classic_youtube_design": {
+		"message": "Aktiviere klassisches YouTube-Design"
+	},
+	"please_note_to_apply_changes_you_have_to_reload_page": {
+		"message": "Beachten Sie: Um vorgenommene Änderungen anzuwenden, müssen Sie die Seite neu laden."
+	},
+	"watched_overlay": {
+		"message": "\"Angesehen\"-Overlay"
+	},
+	"activate_watched_overlay": {
+		"message": "Aktiviere \"Angesehen\"-Overlay"
+	},
+	"about": {
+		"message": "Über"
+	},
 
 
-    "watched": {
-        "message": "Angesehen"
-    }
+	"watched": {
+		"message": "Angesehen"
+	}
 }

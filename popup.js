@@ -67,12 +67,12 @@ checkboxes.forEach(checkbox => {
 // i18n for HTML pages
 function localizeHtmlPage() {
 	//Localize by replacing __MSG_***__ meta tags
-    var objects = document.getElementsByTagName('html');
-    for (var j = 0; j < objects.length; j++) {
-        var obj = objects[j];
+	var objects = document.getElementsByTagName('html');
+	for (var j = 0; j < objects.length; j++) {
+		var obj = objects[j];
 
-        var oldHTML = obj.innerHTML.toString();
-        var newHTML = oldHTML.replace(/__MSG_(\w+)__/g, function(match, msg) {
+		var oldHTML = obj.innerHTML.toString();
+		var newHTML = oldHTML.replace(/__MSG_(\w+)__/g, function(match, msg) {
 			return msg ? chrome.i18n.getMessage(msg) : "text not found";
 		})
 		.replace("__MSG_@@ui_locale__", chrome.i18n.getMessage("@@ui_locale"))
@@ -86,8 +86,8 @@ function localizeHtmlPage() {
 			return "watchedOverlay" + locale + ".png";
 		});
 
-        if(newHTML != oldHTML) {
+		if(newHTML != oldHTML) {
 			obj.innerHTML = newHTML;
-        }
-    }
+		}
+	}
 }

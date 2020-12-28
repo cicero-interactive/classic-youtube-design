@@ -1,12 +1,12 @@
 :root {
-    --cyd__app-drawer-width: 230px;
+	--cyd__app-drawer-width: 230px;
 
-    --cyd__video-thumbnail-homepage-width: 196px;
-    --cyd__video-thumbnail-homepage-height: 110px;
-    
-    --cyd__video-thumbnail-watchpage-width: 168px;
-    --cyd__video-thumbnail-watchpage-height: 94px;
+	--cyd__video-thumbnail-homepage-width: 196px;
+	--cyd__video-thumbnail-homepage-height: 110px;
+	
+	--cyd__video-thumbnail-watchpage-width: 168px;
+	--cyd__video-thumbnail-watchpage-height: 94px;
 
-    
-    --cyd__video-thumbnail-red-bar-height: 4px;
-  }
+
+	--cyd__video-thumbnail-red-bar-height: 4px;
+}

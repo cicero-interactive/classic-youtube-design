@@ -1,6 +1,6 @@
 /*
 ===============================
-    Masthead general
+	Masthead general
 ===============================
 
 (See https://github.com/Cicero-Interactive/Classic-YouTube-Design/wiki/Tweaks:-Masthead#masthead-general)
@@ -8,14 +8,14 @@
 
 /* html body ytd-app div#content.style-scope.ytd-app div#masthead-container.style-scope.ytd-app ytd-masthead#masthead.masthead-finish div#container.style-scope.ytd-masthead */
 #masthead #container.ytd-masthead {
-    height: 50px;
-    box-sizing: border-box;
-    background: var(--yt-spec-brand-background-solid);
-    border-bottom: 1px solid #e8e8e8;
-    min-width: 0;
-    padding-bottom: 8px;
-    padding-top: 7px;
-    padding-left: 30px;
-    padding-right: 30px;
-    position: relative;
+	height: 50px;
+	box-sizing: border-box;
+	background: var(--yt-spec-brand-background-solid);
+	border-bottom: 1px solid #e8e8e8;
+	min-width: 0;
+	padding-bottom: 8px;
+	padding-top: 7px;
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
 }
