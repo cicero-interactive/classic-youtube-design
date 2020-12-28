@@ -5,7 +5,7 @@
 */
 
 ytd-app {
-	--app-drawer-width: var(--cyd__app-drawer-width);
+	--app-drawer-width: var(--cyd__app-drawer__width);
 	--app-drawer-content-container_-_background-color: $yt-main-app-background;
 	background: var(--yt-spec-general-background-b);
 }
