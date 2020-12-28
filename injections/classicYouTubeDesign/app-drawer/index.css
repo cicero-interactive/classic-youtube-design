@@ -8,11 +8,11 @@
 	margin-top: 50px;
 }
 ytd-guide-renderer.ytd-app {
-	width: 230px;
+	width: var(--cyd__app-drawer__width);
 	border-right: 1px solid #e8e8e8;
 }
 #sections.ytd-guide-renderer {
-	width: 230px;
+	width: var(--cyd__app-drawer__width);
 	padding: 13px 22px;
 	box-sizing: border-box;
 }
