@@ -1,0 +1,160 @@
+/*************************************************
+General styling
+*************************************************/
+
+/* Opaque overlay */
+#progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
+	content: "";
+	position: absolute;
+	width: 100% !important;
+	background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* "Watched" overlay */
+#progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	content: "__MSG_watched__";
+	position: absolute;
+	margin: 8px;
+	z-index: 1;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 0.5px;
+	color: rgba(255, 255, 255, 0.7);
+	background-color: rgba(17, 17, 17, 0.5);
+	border-radius: 2px;
+}
+
+/* Show video duration overlay on top of opaque overlay */
+ytd-thumbnail-overlay-time-status-renderer {
+	z-index: 1;
+}
+
+
+
+
+/*************************************************
+Home / trending / subscriptions page
+*************************************************/
+
+/* Opaque overlay */
+ytd-thumbnail-overlay-resume-playback-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
+	top: calc(-1 * var(--cyd__video-thumbnail-homepage-height) + var(--cyd__video-thumbnail-red-bar-height));
+	height: calc(var(--cyd__video-thumbnail-homepage-height) - var(--cyd__video-thumbnail-red-bar-height));
+}
+/* "Watched" overlay */
+ytd-thumbnail-overlay-resume-playback-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	top: calc(-1 * var(--cyd__video-thumbnail-homepage-height) + var(--cyd__video-thumbnail-red-bar-height));
+	padding: 4px 5px;
+	font-size: 12px;
+}
+
+/* Home page: Hide on hover */
+div#dismissable.ytd-rich-grid-video-renderer:hover ytd-thumbnail-overlay-resume-playback-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::before,
+div#dismissable.ytd-rich-grid-video-renderer:hover ytd-thumbnail-overlay-resume-playback-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	display: none;
+}
+
+/* Trending page: Hide on hover */
+ytd-video-renderer:hover div#dismissable.ytd-video-renderer ytd-thumbnail-overlay-resume-playback-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::before,
+ytd-video-renderer:hover div#dismissable.ytd-video-renderer ytd-thumbnail-overlay-resume-playback-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	display: none;
+}
+
+/* Subscription page: Hide default "watched" overlay */
+ytd-video-renderer:hover div#dismissable.ytd-video-renderer ytd-thumbnail-overlay-playback-status-renderer {
+	display: none;
+}
+
+
+
+
+
+
+/*************************************************
+Related videos
+*************************************************/
+
+/* Opaque overlay */
+#related #progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
+	top: calc(-1 * var(--cyd__video-thumbnail-watchpage-height) + var(--cyd__video-thumbnail-red-bar-height));
+	height: calc(var(--cyd__video-thumbnail-watchpage-height) - var(--cyd__video-thumbnail-red-bar-height));
+}
+
+/* "Watched" overlay */
+#related #progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	top: calc(-1 * var(--cyd__video-thumbnail-watchpage-height) + var(--cyd__video-thumbnail-red-bar-height));
+	padding: 3px 4px;
+	font-size: 11px;
+}
+
+
+/* Hide on hover */
+div#dismissable.style-scope.ytd-compact-video-renderer:hover #progress.ytd-thumbnail-overlay-resume-playback-renderer::after,
+div#dismissable.style-scope.ytd-compact-video-renderer:hover #progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
+	display: none;
+}
+
+
+
+
+/* Big video previews */
+/* div#dismissable.style-scope.ytd-video-renderer:hover #progress.ytd-thumbnail-overlay-resume-playback-renderer::after,
+div#dismissable.style-scope.ytd-video-renderer:hover #progress.ytd-thumbnail-overlay-resume-playback-renderer::before, */
+/* Small video previews */
+/* div#dismissable.style-scope.ytd-compact-video-renderer:hover #progress.ytd-thumbnail-overlay-resume-playback-renderer::after,
+div#dismissable.style-scope.ytd-compact-video-renderer:hover #progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
+	display: none;
+} */
+
+
+
+
+
+/*************************************************
+ Compatibility for Ratings Preview for YouTube
+*************************************************/
+
+/* Move up its progress bar™ */
+.ytrp_rb_bg_bottom {
+	bottom: unset !important;
+	top: 0 !important;
+}
+	
+/* Reset native progress bar to original place */
+html .resume-playback-background,
+html .resume-playback-progress-bar,
+html ytd-thumbnail-overlay-resume-playback-renderer {
+	top: unset !important;
+	bottom: 0 !important;
+}
+
+
+
+
+
+/*************************************************
+Style for playlists
+*************************************************/
+
+.ytd-playlist-panel-video-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	width: 92px;
+	height: 48px;
+	top: -52px !important;
+	padding: 4px !important;
+}
+
+.ytd-playlist-panel-video-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::before {
+	top: -52px;
+	font-size: 9px;
+	line-height: 1rem;
+	margin: 4px;
+	padding: 4px;
+}
+/* Hide when hovering over a video card */
+.ytd-playlist-panel-video-renderer:hover .ytd-playlist-panel-video-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::before,
+.ytd-playlist-panel-video-renderer:hover .ytd-playlist-panel-video-renderer #progress.ytd-thumbnail-overlay-resume-playback-renderer::after {
+	display: none;
+}
+
+
+
