@@ -1,6 +1,6 @@
 /*
 ===============================
-    Hamburger menu button
+	Hamburger menu button
 ===============================
 
 (See https://github.com/Cicero-Interactive/Classic-YouTube-Design/wiki/Tweaks:-Masthead#hamburger-menu-button)
@@ -8,13 +8,13 @@
 
 /* html body ytd-app div#content.style-scope.ytd-app div#masthead-container.style-scope.ytd-app ytd-masthead#masthead.masthead-finish div#container.style-scope.ytd-masthead div#start.style-scope.ytd-masthead yt-icon-button#guide-button.style-scope.ytd-masthead */
 yt-icon-button#guide-button.ytd-masthead {
-    margin: 0px 0px 0px -7px;
+	margin: 0px 0px 0px -7px;
 }
 yt-icon-button#guide-button #guide-icon {
-    width: 18px;
-    color:#B8B8B8;
+	width: 18px;
+	color:#B8B8B8;
 }
 
 yt-icon-button#guide-button:hover #guide-icon {
-    color: #666666;
+	color: #666666;
 }

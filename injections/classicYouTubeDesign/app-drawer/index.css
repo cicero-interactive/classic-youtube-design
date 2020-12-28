@@ -1,117 +1,117 @@
 /*
 ===============================
-    App drawer
+	App drawer
 ===============================
 */
 
 #guide-spacer.ytd-app {
-    margin-top: 50px;
+	margin-top: 50px;
 }
 ytd-guide-renderer.ytd-app {
-    width: 230px;
-    border-right: 1px solid #e8e8e8;
+	width: 230px;
+	border-right: 1px solid #e8e8e8;
 }
 #sections.ytd-guide-renderer {
-    width: 230px;
-    padding: 13px 22px;
-    box-sizing: border-box;
+	width: 230px;
+	padding: 13px 22px;
+	box-sizing: border-box;
 }
 paper-item.ytd-guide-entry-renderer {
-    padding: 0px 8.5px;
+	padding: 0px 8.5px;
 }
 ytd-guide-renderer {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 ytd-guide-section-renderer {
-    --paper-item-min-height: 28px;
+	--paper-item-min-height: 28px;
 }
 .title.ytd-guide-entry-renderer {
-    font-size: 13px;
-    line-height: 20px;
+	font-size: 13px;
+	line-height: 20px;
 }
 ytd-guide-entry-renderer:hover {
-    background: #444;
+	background: #444;
 }
 ytd-guide-entry-renderer[active] {
-    background: #cc181e;
+	background: #cc181e;
 }
 .guide-icon.ytd-guide-entry-renderer {
-    --iron-icon-height: 20px;
-    --iron-icon-width: 20px;
-    margin-right: 10px;
+	--iron-icon-height: 20px;
+	--iron-icon-width: 20px;
+	margin-right: 10px;
 }
 ytd-guide-entry-renderer[active] .guide-icon.ytd-guide-entry-renderer,
 ytd-guide-entry-renderer:hover .guide-icon.ytd-guide-entry-renderer {
-    color: white !important;   
+	color: white !important;   
 }
 .title.ytd-guide-entry-renderer {
-    color: rgb(34, 34, 34);
+	color: rgb(34, 34, 34);
 }
 ytd-guide-entry-renderer[active] .title.ytd-guide-entry-renderer,
 ytd-guide-entry-renderer:hover .title.ytd-guide-entry-renderer{
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 20px;
-    text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
-    color: #fff;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 20px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.25);
+	color: #fff;
 }
 ytd-guide-signin-promo-renderer {
-    /* display: none; */
+	/* display: none; */
 }
 #sections.ytd-guide-renderer > .ytd-guide-renderer {
-    padding: 8px 0px !important;
+	padding: 8px 0px !important;
 }
 #sections.ytd-guide-renderer > .ytd-guide-renderer:first-child {
-    padding-top: 0px !important;
+	padding-top: 0px !important;
 }
 ytd-guide-renderer > .ytd-guide-renderer > ytd-guide-signin-promo-renderer > * {
-    padding: 0px 5px;
-    font-size: 13px;
-    line-height: 16.9px;
+	padding: 0px 5px;
+	font-size: 13px;
+	line-height: 16.9px;
 }
 ytd-guide-renderer > .ytd-guide-renderer > ytd-guide-signin-promo-renderer > ytd-button-renderer {
-    margin-top: 10px !important;
+	margin-top: 10px !important;
 }
 #guide-section-title.ytd-guide-section-renderer {
-    margin: 0 5px;
-    padding: 1px 0 8px;
-    color: #f00;
-    line-height: 13px;
-    font-size: 11px;
-    text-transform: uppercase;
+	margin: 0 5px;
+	padding: 1px 0 8px;
+	color: #f00;
+	line-height: 13px;
+	font-size: 11px;
+	text-transform: uppercase;
 }
 ytd-guide-entry-renderer yt-img-shadow.ytd-guide-entry-renderer {
-    width: 20px;
-    height: 20px;
-    border-radius: 0%;
+	width: 20px;
+	height: 20px;
+	border-radius: 0%;
 }
 ytd-guide-entry-renderer yt-img-shadow.ytd-guide-entry-renderer img.yt-img-shadow {
-    width: 20px;
-    height: 20px;
+	width: 20px;
+	height: 20px;
 }
 ytd-guide-entry-renderer yt-img-shadow {
-    margin-right: 12px !important;
+	margin-right: 12px !important;
 }
 #footer {
-    color: rgb(51, 51, 51);
+	color: rgb(51, 51, 51);
 }
 #footer #guide-links-secondary a {
-    font-size: 11px;
-    color: rgb(102, 102, 102);
+	font-size: 11px;
+	color: rgb(102, 102, 102);
 }
 #footer a:hover {
-    color: #167ac6 !important;
-    text-decoration: underline;
+	color: #167ac6 !important;
+	text-decoration: underline;
 }
 #footer #vat-notice > div,
 #footer #copyright > div {
-    font-weight: 400;
-    font-size: 11px;
-    color: rgb(102, 102, 102);
+	font-weight: 400;
+	font-size: 11px;
+	color: rgb(102, 102, 102);
 }
 
 /* Left bar mini */
 ytd-mini-guide-renderer.ytd-app {
-    top: var(--ytd-masthead-height, 50px);
-    border-right: 1px solid #e8e8e8;
+	top: var(--ytd-masthead-height, 50px);
+	border-right: 1px solid #e8e8e8;
 }
