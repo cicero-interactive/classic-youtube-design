@@ -5,7 +5,7 @@
 */
 
 #guide-spacer.ytd-app {
-	margin-top: 50px;
+	margin-top: var(--cyd__masthead__height);
 }
 ytd-guide-renderer.ytd-app {
 	width: var(--cyd__app-drawer__width);
@@ -112,6 +112,6 @@ ytd-guide-entry-renderer yt-img-shadow {
 
 /* Left bar mini */
 ytd-mini-guide-renderer.ytd-app {
-	top: var(--ytd-masthead-height, 50px);
+	top: var(--cyd__masthead__height);
 	border-right: 1px solid #e8e8e8;
 }

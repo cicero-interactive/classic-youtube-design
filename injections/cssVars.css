@@ -1,4 +1,12 @@
 :root {
+	/*
+	===============================
+		Masthead general
+	===============================
+	*/
+
+	--cyd__masthead__height: 50px;
+
 	--cyd__app-drawer__width: 230px;
 
 	--cyd__video-thumbnail-homepage-width: 196px;

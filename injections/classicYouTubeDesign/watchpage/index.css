@@ -8,7 +8,7 @@ ytd-app[is-watch-page] {
 	background-color: var(--yt-spec-general-background-b) !important;
 }
 #content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
-	--ytd-toolbar-offset: var(--ytd-masthead-height, 50px);
+	--ytd-toolbar-offset: var(--cyd__masthead__height);
 }
 #content.style-scope.ytd-page-manager.hide-skeleton .metadata.ytd-compact-video-renderer {
 	padding-right: 15px;

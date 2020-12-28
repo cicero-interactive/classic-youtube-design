@@ -6,7 +6,7 @@
 
 /* Margin from top navbar */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
-	margin-top: var(--ytd-masthead-height, 50px)
+	margin-top: var(--cyd__masthead__height)
 }
 ytd-rich-grid-renderer {
 	background-color: var(--yt-spec-brand-background-primary);
