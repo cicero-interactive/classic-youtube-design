@@ -5,8 +5,8 @@
 */
 
 ytd-app {
+	/* Seperate from the change in ./app-drawer/index.css - This variable here makes sure nothing overflows */
 	--app-drawer-width: var(--cyd__app-drawer__width);
-	--app-drawer-content-container_-_background-color: $yt-main-app-background;
 	background: var(--yt-spec-general-background-b);
 }
 ytd-button-renderer.style-scope.style-suggestive,
