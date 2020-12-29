@@ -8,21 +8,21 @@
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
 	margin-top: var(--ytd-masthead-height, 50px)
 }
-ytd-rich-grid-renderer {
-	background-color: var(--yt-spec-brand-background-primary);
-	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+#primary > ytd-rich-grid-renderer {
 	margin: 2% auto;
-	padding: 0px 8px 15px 18px;
+	padding: 18px 8px 15px 18px;
 	width: 226px;
 	box-sizing: border-box;
+	background-color: var(--yt-spec-brand-background-primary);
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
 }
 @media only screen and (min-width: 550px) {
-	ytd-rich-grid-renderer {
+	#primary > ytd-rich-grid-renderer {
 		width: 438px;
 	}
 }
 @media only screen and (min-width: 750px) {
-	ytd-rich-grid-renderer {
+	#primary > ytd-rich-grid-renderer {
 		width: 644px;
 	}
 	html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-browse.style-scope.ytd-page-manager ytd-two-column-browse-results-renderer.style-scope.ytd-browse.grid-disabled div#primary.style-scope.ytd-two-column-browse-results-renderer ytd-rich-grid-renderer.style-scope.ytd-two-column-browse-results-renderer div#contents.style-scope.ytd-rich-grid-renderer {
@@ -31,27 +31,34 @@ ytd-rich-grid-renderer {
 	}
 }
 @media only screen and (min-width: 975px) {
-	ytd-rich-grid-renderer {
+	#primary > ytd-rich-grid-renderer {
 		width: 850px;
 	}
 }
 @media only screen and (min-width: 1175px) {
-	ytd-rich-grid-renderer {
+	#primary > ytd-rich-grid-renderer {
 		width: 1056px;
 	}
 }
 @media only screen and (min-width: 1575px) {
-	ytd-rich-grid-renderer {
+	#primary > ytd-rich-grid-renderer {
 		width: 1262px;
 	}
 }
 
 /* Make sure the ad banner doesn't overflow (See https://github.com/Cicero-Interactive/Classic-YouTube-Design/issues/8) */
+#masthead-ad.ytd-rich-grid-renderer {
+	display: block;
+}
+
 #masthead-ad.ytd-rich-grid-renderer > ytd-banner-promo-renderer.ytd-rich-grid-renderer {
 	margin-bottom: 15px;
-	margin-right: 5px;
 	/* border-bottom: 1px solid #e2e2e2; */
 	padding-bottom: 10px;
+	overflow: hidden;
+}
+ytd-banner-promo-renderer.banner-promo-style-type-masthead-v2 .ytd-banner-promo-renderer-background.ytd-banner-promo-renderer {
+	margin-right: 10px;
 	overflow: hidden;
 }
 
