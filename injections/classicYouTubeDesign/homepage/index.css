@@ -95,10 +95,12 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 #contents.ytd-rich-grid-renderer, #grid-header.ytd-rich-grid-renderer {
 	width: 100%;
 }
-ytd-rich-shelf-renderer {
+ytd-rich-shelf-renderer,
+ytd-compact-promoted-item-renderer > .ytd-compact-promoted-item-renderer {
 	border-top: 1px solid #e2e2e2;
 }
 #show-more-button.ytd-rich-shelf-renderer,
+ytd-compact-promoted-item-renderer > .ytd-compact-promoted-item-renderer,
 ytd-rich-shelf-renderer[is-show-more-hidden] #dismissable.ytd-rich-shelf-renderer {
 	border-bottom: 1px solid #e2e2e2;
 }
