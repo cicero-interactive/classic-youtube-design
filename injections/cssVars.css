@@ -1,6 +1,20 @@
 :root {
 	/*
 	===============================
+		General
+	===============================
+	*/
+
+	--cyd__general__background-color--light-theme: #f1f1f1;
+	--cyd__general__background-color--dark-theme: #0f0f0f;
+	/* These two values are also stored in YouTube's standard "--yt-spec-general-background-b" variable */
+
+
+
+
+
+	/*
+	===============================
 		Masthead general
 	===============================
 	*/
