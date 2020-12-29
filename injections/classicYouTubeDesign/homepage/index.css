@@ -45,6 +45,16 @@ ytd-rich-grid-renderer {
 		width: 1262px;
 	}
 }
+
+/* Make sure the ad banner doesn't overflow (See https://github.com/Cicero-Interactive/Classic-YouTube-Design/issues/8) */
+#masthead-ad.ytd-rich-grid-renderer > ytd-banner-promo-renderer.ytd-rich-grid-renderer {
+	margin-bottom: 15px;
+	margin-right: 5px;
+	/* border-bottom: 1px solid #e2e2e2; */
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
 #grid-header.ytd-rich-grid-renderer,
 #rich-shelf-header.ytd-rich-shelf-renderer {
 	margin: 15px 0px 10px 0px;
