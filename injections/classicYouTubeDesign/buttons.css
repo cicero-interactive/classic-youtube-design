@@ -1,0 +1,61 @@
+/*
+===============================
+	Buttons
+===============================
+*/
+
+ytd-button-renderer.style-scope.style-suggestive,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer {
+	margin: auto;
+}
+ytd-button-renderer.style-scope.style-suggestive > a,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer > a {
+	outline: 0;
+	font-weight: 500;
+	border-color: #167ac6;
+	background: #167ac6;
+	color: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+	border: solid 1px transparent;
+	box-sizing: border-box;
+}
+/*
+Messes up other buttons; needs to be applied to each button seperately:
+*/
+ytd-button-renderer.style-scope.size-small.style-suggestive > a {
+	padding: 0px 10px;
+	height: 28px;
+	font-size: 11px;
+}
+ytd-button-renderer.style-scope.size-default.style-suggestive > a,
+html body ytd-app ytd-popup-container.style-scope.ytd-app iron-dropdown.style-scope.ytd-popup-container div#contentWrapper.style-scope.iron-dropdown ytd-modal-with-title-and-button-renderer.style-scope.ytd-popup-container div.buttons.style-scope.ytd-modal-with-title-and-button-renderer ytd-button-renderer#button.style-scope.ytd-modal-with-title-and-button-renderer.style-blue-text.size-default a.yt-simple-endpoint.style-scope.ytd-button-renderer {
+	padding: 0px 40px;
+	height: 35px;
+	font-size: 15px;
+}
+/* --- */
+ytd-button-renderer.style-scope.style-suggestive > a:hover,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer > a:hover {
+	background: #126db3;
+}
+ytd-button-renderer.style-scope.style-suggestive > a > paper-button,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer > a > paper-button {
+	min-width: 0px;
+}
+ytd-button-renderer.style-scope.style-suggestive yt-icon,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer yt-icon {
+	display: none;
+}
+ytd-button-renderer.style-scope.style-suggestive yt-formatted-string,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer yt-formatted-string {
+	margin: 0px !important;
+	color: white;
+	text-transform: capitalize;
+}
+ytd-button-renderer.style-scope.style-suggestive #button,
+ytd-button-renderer.style-scope.ytd-modal-with-title-and-button-renderer #button {
+	border: none;
+	margin: 0px !important;
+	padding: 0px !important;
+}

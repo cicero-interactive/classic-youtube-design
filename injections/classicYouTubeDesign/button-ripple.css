@@ -1,0 +1,12 @@
+/*
+===============================
+	Button rupple effect
+===============================
+
+(If you don't know what this is, see here: https://css-tricks.com/how-to-recreate-the-ripple-effect-of-material-design-buttons/)
+*/
+
+/* Hide the ripple effect */
+.circle {
+	display: none;
+}
