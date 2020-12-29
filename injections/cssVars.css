@@ -3,12 +3,35 @@
 	===============================
 		General
 	===============================
+
+	These are the default values. Custom user-defined values get injected via JavaScript later.
 	*/
 
-	--cyd__general__background-color--light-theme: #f1f1f1;
-	--cyd__general__background-color--dark-theme: #0f0f0f;
-	/* These two values are also stored in YouTube's standard "--yt-spec-general-background-b" variable */
 
+	/*********************************************************************
+	Set background color (used fot all pages)
+	*********************************************************************/
+	--cyd__general__background-color--default: var(--yt-spec-general-background-b);
+	/* Equals:
+		- #f1f1f1 for light theme
+		- #0f0f0f for dark theme */
+	--cyd__general__background-color--light-theme: var(--cyd__general__background-color--default);
+	--cyd__general__background-color--dark-theme: var(--cyd__general__background-color--default);
+
+	--cyd__general__background-color: var(--cyd__general__background-color--light-theme);
+
+
+	/*********************************************************************
+	 Set divider color (used for masthead, app-drawer, homepage etc.)
+	*********************************************************************/
+	--cyd__general__divider-color--default: var(--yt-spec-10-percent-layer);
+	/* Equals:
+		- rgba(0, 0, 0, 0.1) for light theme
+		- rgba(255, 255, 255, 0.1) for dark theme */
+	--cyd__general__divider-color--light-theme: var(--cyd__general__divider-color--default);
+	--cyd__general__divider-color--dark-theme: var(--cyd__general__divider-color--default);
+
+	--cyd__general__divider-color: var(--cyd__general__divider-color--light-theme);
 
 
 
@@ -21,11 +44,24 @@
 
 	--cyd__masthead__height: 50px;
 
+
+
+
+	/*
+	===============================
+		App-drawer general
+	===============================
+	*/
+
 	--cyd__app-drawer__width: 230px;
+
+
+
+
 
 	--cyd__video-thumbnail-homepage-width: 196px;
 	--cyd__video-thumbnail-homepage-height: 110px;
-	
+
 	--cyd__video-thumbnail-watchpage-width: 168px;
 	--cyd__video-thumbnail-watchpage-height: 94px;
 

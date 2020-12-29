@@ -11,7 +11,7 @@
 	height: var(--cyd__masthead__height);
 	box-sizing: border-box;
 	background: var(--yt-spec-brand-background-solid);
-	border-bottom: 1px solid #e8e8e8;
+	border-bottom: 1px solid var(--cyd__general__divider-color);
 	min-width: 0;
 	padding-bottom: 8px;
 	padding-top: 7px;

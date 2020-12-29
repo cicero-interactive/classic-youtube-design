@@ -53,7 +53,7 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 
 #masthead-ad.ytd-rich-grid-renderer > ytd-banner-promo-renderer.ytd-rich-grid-renderer {
 	margin-bottom: 15px;
-	/* border-bottom: 1px solid #e2e2e2; */
+	/* border-bottom: 1px solid var(--cyd__general__divider-color); */
 	padding-bottom: 10px;
 	overflow: hidden;
 }
@@ -97,12 +97,12 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 }
 ytd-rich-shelf-renderer,
 ytd-compact-promoted-item-renderer > .ytd-compact-promoted-item-renderer {
-	border-top: 1px solid #e2e2e2;
+	border-top: 1px solid var(--cyd__general__divider-color);
 }
 #show-more-button.ytd-rich-shelf-renderer,
 ytd-compact-promoted-item-renderer > .ytd-compact-promoted-item-renderer,
 ytd-rich-shelf-renderer[is-show-more-hidden] #dismissable.ytd-rich-shelf-renderer {
-	border-bottom: 1px solid #e2e2e2;
+	border-bottom: 1px solid var(--cyd__general__divider-color);
 }
 ytd-rich-section-renderer,
 #contents.ytd-rich-shelf-renderer {

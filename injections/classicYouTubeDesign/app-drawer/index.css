@@ -9,7 +9,7 @@
 }
 ytd-guide-renderer.ytd-app {
 	width: var(--cyd__app-drawer__width);
-	border-right: 1px solid #e8e8e8;
+	border-right: 1px solid var(--cyd__general__divider-color);
 }
 #sections.ytd-guide-renderer {
 	width: var(--cyd__app-drawer__width);
@@ -113,5 +113,5 @@ ytd-guide-entry-renderer yt-img-shadow {
 /* Left bar mini */
 ytd-mini-guide-renderer.ytd-app {
 	top: var(--cyd__masthead__height);
-	border-right: 1px solid #e8e8e8;
+	border-right: 1px solid var(--cyd__general__divider-color);
 }
