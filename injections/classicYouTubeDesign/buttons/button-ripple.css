@@ -7,6 +7,6 @@
 */
 
 /* Hide the ripple effect */
-.circle {
+paper-ripple {
 	display: none;
 }
