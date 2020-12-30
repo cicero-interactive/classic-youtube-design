@@ -236,6 +236,42 @@ html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.
 }
 
 
+/* Merch shelf */
+ytd-merch-shelf-renderer {
+	margin: 0px 0px 10px 0px;
+	border-bottom: none;
+	padding: 15px;
+	background: var(--yt-spec-brand-background-solid);
+	box-shadow: 0 1px 2px rgba(0,0,0,.1);
+}
+ytd-merch-shelf-renderer #main > .ytd-merch-shelf-renderer#banner,
+ytd-merch-shelf-renderer #main > .ytd-merch-shelf-renderer#item-list {
+	margin-left: 0px;
+}
+ytd-merch-shelf-renderer #main > .ytd-merch-shelf-renderer#item-list {
+	/* Make it easier to vertically center scroll arrow buttons */
+	position: relative;
+	/* Make the item list touch the left and right corner when scrolled */
+	margin-left: -15px;
+	margin-right: -15px;
+}
+/* First and last items shouldn't touch left and right corners */
+ytd-merch-shelf-renderer #main > .ytd-merch-shelf-renderer#item-list ytd-merch-shelf-item-renderer:first-child {
+	margin-left: 15px;
+}
+ytd-merch-shelf-renderer #main > .ytd-merch-shelf-renderer#item-list ytd-merch-shelf-item-renderer:last-child {
+	margin-right: 15px;
+}
+/* Scroll arrow buttons */
+#left-arrow-container.ytd-merch-shelf-renderer,
+#right-arrow-container.ytd-merch-shelf-renderer {
+	top: 29px;
+}
+#left-arrow-container.ytd-merch-shelf-renderer {
+	left: -16px;
+}
+
+
 /* Comments */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app ytd-watch-flexy.style-scope.ytd-page-manager.hide-skeleton div#columns.style-scope.ytd-watch-flexy div#primary.style-scope.ytd-watch-flexy div#primary-inner.style-scope.ytd-watch-flexy ytd-comments#comments.style-scope.ytd-watch-flexy {
 	margin: 0px 0px 10px 0px;
