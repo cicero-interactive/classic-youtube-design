@@ -99,7 +99,7 @@ setTimeout(function() {
 	// 		document.getElementsByTagName("head")[0].appendChild(link);
 	// 	});
 	// };
-}, 1);
+}, 2);
 
 
 
@@ -124,10 +124,10 @@ function load_options() {
 
 function docReady(fn) {
 	// see if DOM is already available
-	if (document.readyState === "complete" || document.readyState === "interactive") {
+	if (document.readyState === "complete") {
 		// call on next available tick
 		setTimeout(fn, 1);
 	} else {
-		document.addEventListener("DOMContentLoaded", fn);
+		document.addEventListener("load", fn);
 	}
 }
