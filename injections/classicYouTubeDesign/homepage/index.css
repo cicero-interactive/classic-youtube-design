@@ -61,6 +61,17 @@ ytd-banner-promo-renderer.banner-promo-style-type-masthead-v2 .ytd-banner-promo-
 	margin-right: 10px;
 	overflow: hidden;
 }
+ytd-video-masthead-ad-v3-renderer.ytd-rich-grid-renderer {
+	margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+#top-container.ytd-video-masthead-ad-v3-renderer {
+	margin-right: 10px;
+	overflow: hidden;
+}
+
+
 
 #grid-header.ytd-rich-grid-renderer,
 #rich-shelf-header.ytd-rich-shelf-renderer {
