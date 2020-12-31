@@ -15,91 +15,94 @@ setTimeout(function() {
 		link.rel = "stylesheet";
 		document.getElementsByTagName("head")[0].appendChild(link);
 	});
-	if (classicYoutubeActivated == true) {
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/index.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/masthead/index.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/masthead/menu-button.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/app-drawer/index.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/homepage/index.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/watchpage/index.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/masthead/search-box.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/buttons/index.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-		docReady(function() {
-			// DOM is loaded and ready for manipulation here
-			var link = document.createElement("link");
-			link.href = chrome.extension.getURL("injections/classicYouTubeDesign/buttons/button-ripple.css");
-			link.type = "text/css";
-			link.rel = "stylesheet";
-			document.getElementsByTagName("head")[0].appendChild(link);
-		});
-	};
-	// if (watchedOverlayActivated == true) {
-	// 	docReady(function() {
-	// 		// DOM is loaded and ready for manipulation here
-	// 		var link = document.createElement("link");
-	// 		link.href = chrome.extension.getURL("injections/watchedOverlay.css");
-	// 		link.type = "text/css";
-	// 		link.rel = "stylesheet";
-	// 		document.getElementsByTagName("head")[0].appendChild(link);
-	// 	});
-	// };
-}, 2);
+	// Hack to work around different loading times in different environments
+	repeatXtimes(3, 2000, function() {
+		if (classicYoutubeActivated == true) {
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/index.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/masthead/index.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/masthead/menu-button.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/app-drawer/index.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/homepage/index.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/watchpage/index.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/masthead/search-box.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/buttons/index.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+			docReady(function() {
+				// DOM is loaded and ready for manipulation here
+				var link = document.createElement("link");
+				link.href = chrome.extension.getURL("injections/classicYouTubeDesign/buttons/button-ripple.css");
+				link.type = "text/css";
+				link.rel = "stylesheet";
+				document.getElementsByTagName("head")[0].appendChild(link);
+			});
+		};
+		// if (watchedOverlayActivated == true) {
+		// 	docReady(function() {
+		// 		// DOM is loaded and ready for manipulation here
+		// 		var link = document.createElement("link");
+		// 		link.href = chrome.extension.getURL("injections/watchedOverlay.css");
+		// 		link.type = "text/css";
+		// 		link.rel = "stylesheet";
+		// 		document.getElementsByTagName("head")[0].appendChild(link);
+		// 	});
+		// };
+	})
+}, 1);
 
 
 
@@ -129,5 +132,11 @@ function docReady(fn) {
 		setTimeout(fn, 1);
 	} else {
 		document.addEventListener("load", fn);
+	}
+}
+
+function repeatXtimes(amount, interval, fn) {
+	for (i = 0; i < amount; i++) {
+		setTimeout(fn, i * interval + 1);
 	}
 }
