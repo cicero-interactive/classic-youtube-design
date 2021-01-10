@@ -6,7 +6,9 @@
 
 /* Margin from top navbar */
 html body ytd-app div#content.style-scope.ytd-app ytd-page-manager#page-manager.style-scope.ytd-app {
-	margin-top: var(--cyd__masthead__height)
+	/* When in fullscreen, --ytd-masthead-height gets set to 0. To not have a huge border on top of
+	the video, we have to use this approach */
+	margin-top: min(var(--cyd__masthead__height), var(--ytd-masthead-height));
 }
 #primary > ytd-rich-grid-renderer {
 	margin: 2% auto;
