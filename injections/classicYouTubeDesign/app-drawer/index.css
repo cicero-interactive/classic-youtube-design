@@ -5,14 +5,14 @@
 */
 
 #guide-spacer.ytd-app {
-	margin-top: 50px;
+	margin-top: var(--cyd__masthead__height);
 }
 ytd-guide-renderer.ytd-app {
-	width: 230px;
-	border-right: 1px solid #e8e8e8;
+	width: var(--cyd__app-drawer__width);
+	border-right: 1px solid var(--cyd__general__divider-color);
 }
 #sections.ytd-guide-renderer {
-	width: 230px;
+	width: var(--cyd__app-drawer__width);
 	padding: 13px 22px;
 	box-sizing: border-box;
 }
@@ -112,6 +112,6 @@ ytd-guide-entry-renderer yt-img-shadow {
 
 /* Left bar mini */
 ytd-mini-guide-renderer.ytd-app {
-	top: var(--ytd-masthead-height, 50px);
-	border-right: 1px solid #e8e8e8;
+	top: var(--cyd__masthead__height);
+	border-right: 1px solid var(--cyd__general__divider-color);
 }
