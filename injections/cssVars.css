@@ -43,6 +43,20 @@
 	*/
 
 	--cyd__masthead__height: 50px;
+	--cyd__masthead__divider-color--default: var(--cyd__general__divider-color--default);
+	--cyd__masthead__divider-color--light-theme: var(--cyd__general__divider-color--light-theme);
+	--cyd__masthead__divider-color--dark-theme: var(--cyd__general__divider-color--dark-theme);
+
+	--cyd__masthead__divider-color: var(--cyd__general__divider-color--light-theme);
+
+
+
+
+	/*
+	===============================
+		App-drawer general
+	===============================
+	*/
 
 
 
@@ -54,6 +68,11 @@
 	*/
 
 	--cyd__app-drawer__width: 230px;
+	--cyd__app-drawer__divider-color--light-theme: var(--cyd__general__divider-color--light-theme);
+	--cyd__app-drawer__divider-color--dark-theme: var(--cyd__general__divider-color--dark-theme);
+
+
+
 
 
 
