@@ -7,16 +7,16 @@ load_options();
 // Without this 1 ms delay, this would execute before the settings are loaded. No idea why...
 // Inject CSS
 setTimeout(function() {
-	docReady(function() {
-		// DOM is loaded and ready for manipulation here
-		var link = document.createElement("link");
-		link.href = chrome.extension.getURL("injections/cssVars.css");
-		link.type = "text/css";
-		link.rel = "stylesheet";
-		document.getElementsByTagName("head")[0].appendChild(link);
-	});
 	// Hack to work around different loading times in different environments
 	repeatXtimes(3, 2000, function() {
+		docReady(function() {
+			// DOM is loaded and ready for manipulation here
+			var link = document.createElement("link");
+			link.href = chrome.extension.getURL("injections/cssVars.css");
+			link.type = "text/css";
+			link.rel = "stylesheet";
+			document.getElementsByTagName("head")[0].appendChild(link);
+		});
 		if (classicYoutubeActivated == true) {
 			docReady(function() {
 				// DOM is loaded and ready for manipulation here
