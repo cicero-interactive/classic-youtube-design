@@ -16,11 +16,6 @@ As stated above, we are pretty much forced to use the new Polymer substructure. 
 We cannot guarantee that there are no issues. This addon is still in early development, and as soon as YouTube changes something, this addon may brick it. You can of course just turn it off until the matching bug-fix arrives, so for power users it should be no problem. Just don't try installing it on inexperienced users' PCs, it will probably do more harm than good.
 
 ## The future
-Our next goals are:
-- [x] Adding a configuration popup menu for adjustable preferences
-- [ ] Implementing support for all subpages
-- [ ] Adding JavaScript to rearrange some HTML elements to more closely resemble the old layout
-- [ ] Adding dark-mode support
-- [ ] Adding settings for users to choose which elements should be changed and which not
+Our next goals are here: https://github.com/Cicero-Interactive/Classic-YouTube-Design/projects
 
 Let's all hope the best and cross our fingers that Google doesn't break things as hard as in 2017 again!
